@@ -1,0 +1,29 @@
+<template name="login">           
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content text-center bg-translucent bg-shadow-inverse bg-rounded">
+                <div class="modal-header">
+                    <h1 class="margin-top-0 color-variable color-primary">// Log In</h1>
+                    <button class="close-btn color-variable color-primary" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                     <div class="text-center">
+                        <form id="login-form" class="row">
+                            <div class="col-md-6">
+                                <label></label>
+                                <input id="login-username" type="text" class="login-field form-control" placeholder="Username" required> 
+                            </div>
+                            <div class="col-md-6">
+                                <label></label>
+                                <input id="login-password" type="password" class="login-field form-control" placeholder="Password">
+                            </div>
+                            <div class="col-md-12">
+                                <label></label>
+                                <button id="login-submit-btn" type="submit" class="btn color-variable color-primary btn-block btn-lg bg-translucent bg-shadow bg-rounded clean">Submit</button>
+                            </div>
+                            <p id="login-message" class="color-variable color-primary"></p>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</template>
