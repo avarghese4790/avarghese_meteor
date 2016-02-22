@@ -14,12 +14,12 @@ body {
     color: #f8f8ff !important;
 }
 .color-secondary {
-    color: purple !important;
+    color: #7ec0ee !important;
 }
 
 .color-primary:hover,
 .color-primary:active {
-    color: purple !important;    
+    color: #7ec0ee !important;    
 }
 .color-secondary:hover,
 .color-secondary:active {
@@ -567,7 +567,7 @@ input[type="text"]:focus {
     margin-right: 10px;
 }
 .widget-half-size {
-    min-width: 260px;
+    min-width: 300px;
     max-width: 500px;
 }
 .item-lists hr, .message-list hr  {

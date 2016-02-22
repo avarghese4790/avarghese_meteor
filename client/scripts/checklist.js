@@ -1,12 +1,14 @@
 Template.checklist.events({
-	'click #add-item-btn' : function (e) {
+	'click #add-item-btn' : function () {
 		if($('#new-item').val()){
+			$('#checklist').removeClass('animated bounceIn');
 			Checklist.insert({
 				item: $('#new-item').val(),
 				date: new Date(),
 				completed: false
 			});
 			$('#new-item').val('');
+			$('#checklist').addClass('animated bounceIn');
 		}
 	},
 	'click .delete-item-btn' : function (e) {

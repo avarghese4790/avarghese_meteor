@@ -4,17 +4,17 @@ Template.messages.events({
       $('#messageModal').modal('show');
 	},
   'click #delete-message-btn' : function (e) {
-      $('#messages').removeClass('bounceIn');
+      $('#messages').removeClass('animated bounceIn');
       Messages.remove({_id:Session.get('selectedMessage')._id});
       $('#messageModal').modal('hide');
-      $('#messages').addClass('bounceIn');
+      $('#messages').addClass('animated bounceIn');
   },
   'click #delete-all-messages-btn' : function (e) {
-      $('#messages').removeClass('bounceIn');
+      $('#messages').removeClass('animated bounceIn');
       Messages.find({},{fields: {'_id':1}}).forEach(function (message) {
             Messages.remove({_id: message._id});
       });
-      $('#messages').addClass('bounceIn');
+      $('#messages').addClass('animated bounceIn');
   }
 });
 
