@@ -1,0 +1,22 @@
+<template name="adminNav">
+	<div id="nav" class="navbar navbar-fixed-top navbar-default fadeInDown bg-translucent">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="menu-bars fa fa-bars color-variable color-primary"></span>
+            </button>
+            <a class="navbar-brand scroll color-variable color-primary nav-text" href="/"><i class="fa fa-hashtag">AV</i> </a>
+        </div>
+        <div class="navbar-collapse collapse bg-translucent" id="bs-navbar">
+            <div id="user-info">   
+                <ul class="nav navbar-nav navbar-right">
+                    {{#if currentUser}} 
+                        <li><a id="user-btn" class="color-variable color-primary nav-text" href="#userModal" data-toggle="modal" data-target="#userModal"><i class="icon fa fa-user"></i>{{currentUser.username}}</a> </li>
+                    {{else}}
+                        <li><a id="login-btn" class="color-variable color-primary nav-text" href="#loginModal" data-toggle="modal" data-target="#loginModal"><i class="icon fa fa-sign-in"></i>Log In</a> </li>
+                    {{/if}}
+                </ul> 
+            </div>                
+        </div>
+    </div>  
+</template>	

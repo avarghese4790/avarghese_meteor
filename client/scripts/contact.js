@@ -1,18 +1,19 @@
 Template.contact.events({
-  'click #submitMessageBtn' : function (e) {
-  	if($('#submitMessageBtn').hasClass('submitted')){ return; }
+  'click #submit-msg-btn' : function (e) {
+  	if($('#submit-msg-btn').hasClass('submitted')){ return; }
   	if(!validated()){ return;}
     e.preventDefault();
-     $('.contact-field').prop( "disabled", true);
+     $('.contact-field').prop( 'disabled', true);
 	 Messages.insert({
-	 	name: $("#contact-name").val(),
-	 	email: $("#contact-email").val(),
-	 	phone: $("#contact-phone").val(),
-	 	message: $("#contact-message").val()
+	 	name: $('#contact-name').val(),
+	 	email: $('#contact-email').val(),
+	 	phone: $('#contact-phone').val(),
+	 	message: $('#contact-message').val(),
+	 	date: new Date()
 	 });
-	 $('.contact-field').val("");
-	 $('#submitMessageBtn').addClass('bounceIn submitted');
-	 $('#submitMessageBtn').text('Message Submitted!');
+	 $('.contact-field').val('');
+	 $('#submit-msg-btn').addClass('bounceIn submitted');
+	 $('#submit-msg-btn').text('Message Submitted!');
 	}
 });
 
@@ -21,6 +22,5 @@ Template.contact.onRendered(function(){
 });
 
 function validated() {
-	console.log("validating");
 	return true;
 }
