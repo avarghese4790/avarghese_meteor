@@ -1,0 +1,381 @@
+/*fonts*/
+
+@import url(https://fonts.googleapis.com/css?family=Monda);
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Monda', sans-serif;
+    background-color: #2d2d2d;
+}
+
+.color-variable {
+    transition: 0.3s;
+}
+
+.color-primary {
+    color: #f8f8ff !important;
+}
+.color-secondary {
+    color: purple !important;
+}
+
+.color-primary:hover,
+.color-primary:active {
+    color: purple !important;    
+}
+
+.color-secondary:hover,
+.color-secondary:active {
+    color: #f8f8ff !important;    
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+.resume-icon {
+    font-size: 25px;
+    padding: 20px 20px 20px 0;
+    cursor: pointer;
+}
+.page-wrap {
+    width: 100%;
+    height: 100%;
+}
+.pad-top {
+    padding-top: 150px;
+}
+.nav-bg {
+    background: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    transition: 0.3s;
+}
+button .navbar-toggle,
+button .navbar-toggle:hover,
+button .navbar-toggle:focus,
+button .navbar-toggle:active {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.badge {
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3) !important;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.filter,
+button,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    transition: 0.3s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #f8f8ff;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 15px;
+}
+.margin-top-bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+.navbar-toggle {
+    margin: 0 !important;
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-collapse {
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+
+.menu-bars {
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+button .filter {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.padded {
+    padding: 20px 0;
+}
+.pad-all {
+    padding: 20px;
+}
+
+input.error{
+    background-color:rgb(255, 231, 231);
+}
+
+#submitMessageBtn:active{
+    color: #f8f8ff;
+}
+
+#submitMessageBtn {
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.7);
+    width: 98%;
+}
+
+#network-icons a {
+    margin: 0 25px 40px 25px;
+    width: 70%;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+}
+#network-icons a h3 {
+    margin: 10 0;
+    margin: 0;
+    border-radius: 6px;
+}
+.network-icon-name{
+    transition: 0.3s;
+}
+
+.network-icon-name:hover {
+    font-size: 20px;
+}
+.portfolio-item-container {
+    padding: 10px;
+    transition: 0s !important;
+    height: 300px;
+}
+
+.portfolio-item {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-item a h2 {
+    top: 10px;
+    margin: 0;
+    padding: 20px;
+}
+
+.portfolio-item a h2:hover {
+    font-size: 23px;
+}
+
+.resume-item-header:hover {
+    font-size: 19px;
+}
+
+.resume-item-header {
+    font-size: 17px;
+}
+
+#network-icons {
+    margin: 0px 25px;
+}
+
+.bg-board {
+    background: url(http://i.imgur.com/78ZsAjw.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+.section {
+    padding: 50px 10px;
+}
+
+#login {
+    transition: 0.3s;
+    position: fixed;
+    right: 0;
+    top: -305px;
+    width: 50%;
+    height: 300px;
+    z-index: 20;
+    min-width: 300px;
+}
+
+.login-viewable {
+    transform: translateY(305px);
+}
+
+#nav {
+    z-index: 10;
+    border-radius: 0 !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transition: 0.3s;
+    background: transparent;
+}
+#home {
+    background: url(http://i.imgur.com/XArrwf6.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 0s;
+    width: 100%;
+    min-height: 100%;
+}
+#resume {
+    background: black;
+    background: url(http://i.imgur.com/QeDP2AA.jpg);
+    background-size: cover;
+    padding: 80px 10px;
+    min-height: 100%;
+}
+
+.nav-text {
+    font-size: 20px;
+}
+#nav a {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    transition: 0.3s;
+}
+#nav a:hover {
+    font-size: 25px;
+}
+.navbar {
+    background: #2d2d2d;
+    border-bottom: none;
+}
+.contact-icons .fa {
+    color: #f8f8ff;
+    font-size: 25px;
+    padding: 0 5px;
+}
+#about-me {
+    margin-left: 0 20px;
+}
+.img-container {
+    background-attachment: fixed;
+    background: url(http://i.imgur.com/4rD8fil.jpg);
+    background-size: cover;
+    height: 400px;
+    transition: 0s;
+}
+#aboutme-text p {
+    padding: 20px 30px;
+}
+button {
+    display: inline-block;
+    padding: .4em .8em;
+    margin: 0 5px;
+    background: transparent;
+    border: 0;
+    color: #ddd;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 0px;
+    color: black;
+    cursor: pointer;
+}
+button:focus {
+    outline: 0 none;
+}
+#portfolio .container .row {
+    padding: 10px 0;
+}
+.text-shadow {
+    text-shadow: 1px 1px 1px rgba(60, 60, 60, .5);
+}
+#page-wrap {
+    transition: 0.3s;
+}
+
+/*general styling*/
+.bg-translucent-dark {
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+.bg-translucent {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+.color-secondary {
+    color: #f8f8ff;
+}
+
+.text-center {
+    text-align: center;
+}
+.centered {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto;
+}
+
+.centered-x {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.centered-y {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.icon {
+    text-decoration: none;
+}
+
+.bg-dark-1 {
+    background-color: #0d0d0d;
+}
+.bg-dark-2 {
+    background-color: #1a1a1a;
+}
+.bg-dark-3 {
+    background-color: #262626;
+}
+.bg-transparent {
+    background: transparent;
+}
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+.cover {
+    height: 100%;
+    width: 100%;
+}
+.border-bottom {
+    border-bottom: 2px solid rgba(0, 0, 0, .5);
+}
+.clean,
+a {
+    text-decoration: none !important;
+    list-style-type: none !important;
+    outline: none !important;
+}
