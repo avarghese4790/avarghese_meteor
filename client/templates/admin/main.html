@@ -13,7 +13,9 @@
 		{{>user}}
 		{{>widgets}}
 	{{/if}}
-	<script type="text/javascript">	
+	<script type="text/javascript">
+		new WOW().init();	  	
+		if(!Modernizr.touch){ $(window).stellar();}
 		$(function(){
 			$('body').removeClass('modal-open');
 			$('.modal-backdrop').remove();
