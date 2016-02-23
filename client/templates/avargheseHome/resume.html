@@ -1,0 +1,19 @@
+<template name="resume">
+	<div id="resume" class="">
+		<div class="row text-center">
+	        <h1 id="resume-type" class="margin-top-0 color-variable color-primary wow fadeInDown">// Experience &nbsp;
+	           {{#if authorized}}
+	           		<a href="/files/Arun Varghese - Software Engineer.doc">
+	           			<i class="fa fa-download fa-3 color-variable color-primary"></i>
+	           		</a>
+	           	{{/if}}	
+	        </h1>
+	    </div>
+    	<hr>
+		{{#if showText}}
+			{{>resumeText}}
+		{{else}}
+			{{>resumeInteractive}}
+        {{/if}}
+	</div>
+</template>

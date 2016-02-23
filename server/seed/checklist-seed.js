@@ -1,6 +1,5 @@
-/** 
-Checklist.remove({});
-if(Checklist.find({}).count() === 0){
+// if(Checklist.find({}).count() === 0){
+if(false){
  Checklist.insert({
  	task:"test task1",
  	date: new Date(),
@@ -22,4 +21,3 @@ if(Checklist.find({}).count() === 0){
  	completed: true
  });
 }
-**/

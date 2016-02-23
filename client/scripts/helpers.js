@@ -2,6 +2,10 @@ Template.registerHelper('formatDate', function(date){
   return moment(date).format('H:mm M/D/YY');
 });
 
+Template.registerHelper('formatTimelineDate', function(date){
+  return moment(date).format('MM/DD/YYYY');
+});
+
 Template.registerHelper('formatDateShort', function(date){
   return moment(date).format('M/D/YY');
 });

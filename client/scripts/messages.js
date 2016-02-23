@@ -9,12 +9,15 @@ Template.messages.events({
       $('#messageModal').modal('hide');
       $('#messages').addClass('animated bounceIn');
   },
-  'click #delete-all-messages-btn' : function (e) {
+  'click #delete-all-messages-btn' : function () {
       $('#messages').removeClass('animated bounceIn');
       Messages.find({},{fields: {'_id':1}}).forEach(function (message) {
             Messages.remove({_id: message._id});
       });
       $('#messages').addClass('animated bounceIn');
+  },
+  'click #export-messages-btn' : function(){
+      MessageExporter.exportAllMessages();
   }
 });
 

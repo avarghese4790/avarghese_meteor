@@ -27,11 +27,12 @@
 							</li>
 						{{/each}}
 					</ul>
-					<h2 class="no-space center-x">
-						<a id="delete-all-messages-btn" href="#" class="color-variable color-primary clean">
-		                	<i class="icon fa fa-trash"></i>Clear
-		            	</a>	         
-	        		</h2>
+					<a id="delete-all-messages-btn" href="#" class="messages-btn col-md-6 color-variable color-primary clean">
+	                	<i class="icon fa fa-trash"></i>Clear
+	            	</a>
+					<a id="export-messages-btn" href="#" class="messages-btn col-md-6 color-variable color-primary clean">
+	                	<i class="icon fa fa-external-link"></i>Export
+	            	</a>         
 				{{else}}
 					<h3 class="color-variable color-primary">No Messages :(</h3>
 				{{/if}}
@@ -50,7 +51,6 @@
 					 <div id="message-info" class="col-md-8">
 						 <h2 class="color-variable color-primary text-left"><i class="icon fa fa-user"></i>{{selectedMessage.name}}</h2>
 						 <h2 class="color-variable color-primary text-left"><i class="icon fa fa-envelope-o"></i>{{selectedMessage.email}}</h2>
-						 <h2 class="color-variable color-primary text-left"><i class="icon fa fa-mobile"></i>{{selectedMessage.phone}}</h2>
 						 <h2 class="color-variable color-primary text-left"><i class="icon fa fa-calendar-o"></i>{{formatDate selectedMessage.date}}</h2>
 						 <label></label>
 					 </div>

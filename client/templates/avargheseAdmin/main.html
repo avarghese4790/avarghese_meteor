@@ -1,7 +1,5 @@
-<template name="admin">
-	{{>adminNav}}
-	{{>login}}
-	{{>user}}
+<template name="avargheseAdmin">
+	{{>avargheseAdminNav}}
 	{{#if notAuthorized}}
 		{{>notAuthorized}}
 	{{else}}
@@ -11,9 +9,10 @@
 		new WOW().init();	  	
 		if(!Modernizr.touch){ $(window).stellar();}
 		$(function(){
+			$(window).stellar('refresh');
 			$('body').removeClass('modal-open');
 			$('.modal-backdrop').remove();
-			if(!Modernizr.touch){ $(window).stellar('refresh');}
+			$(document).scrollTop(0);
 		});
 	</script>
 </template>

@@ -1,0 +1,34 @@
+#m-sim-control {
+	margin: 70px 0 0 10px;
+}
+#m-results {
+	padding: 20px;
+    height: 600px;
+    overflow-y: scroll !important;
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+#m-container {
+	min-height: 100%;
+    width: 100%;
+}
+#m-container row {
+	min-height: 100%;
+}
+#m-board {
+	padding: 20px;
+}
+.bg-m-board {
+	
+}
+.tile {
+	position: absolute;
+}
+.player {
+	display: inline-block !important;
+	padding: 0 10px;
+	font-size: 30px;
+}
+#m-game-details {
+	height: 600px;
+}

@@ -1,6 +1,5 @@
-/**
-Messages.remove({});
-if(Messages.find({}).count() === 0){
+// if(Messages.find({}).count() === 0){
+if(false){
  Messages.insert({
  	name:"arun varghese",
  	email: "arunv4700@gmail.com",
@@ -242,4 +241,3 @@ if(Messages.find({}).count() === 0){
   read: true
  });
 }
-**/
