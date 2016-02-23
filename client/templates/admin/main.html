@@ -1,19 +1,15 @@
 <template name="admin">
+	{{>adminNav}}
+	{{>login}}
+	{{>user}}
 	{{#if notAuthorized}}
-		<h1 class="pad-all text-center">401 NOT AUTHORIZED</h1>
-		<h1 class="pad-all text-center">
-			Please Log In @ 
-			<a href="avarghese.meteor.com" class="clean">
-				avarghese.meteor.com
-			</a>
-		</h1>
+		{{>notAuthorized}}
 	{{else}}
-		{{>adminNav}}
-		{{>login}}
-		{{>user}}
 		{{>widgets}}
 	{{/if}}
-	<script type="text/javascript">	
+	<script type="text/javascript">
+		new WOW().init();	  	
+		if(!Modernizr.touch){ $(window).stellar();}
 		$(function(){
 			$('body').removeClass('modal-open');
 			$('.modal-backdrop').remove();

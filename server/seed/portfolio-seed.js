@@ -6,7 +6,7 @@ if(Portfolio.find({}).count() === 0){
  	title: "Travel Gallery Design",
  	stellarRatio: ".4",
  	wowDelay: ".1s",
- 	source: "http://av-travels.meteor.com/",
+ 	source: "/travel",
  	display: "col-md-4"
  });
 Portfolio.insert({
@@ -42,7 +42,7 @@ Portfolio.insert({
  	title: "Career Recharge",
  	stellarRatio: ".4",
  	wowDelay: ".5s",
- 	source: "https://career-recharge.meteor.com",
+ 	source: "/career",
  	display: "col-md-4"
  });
 }
