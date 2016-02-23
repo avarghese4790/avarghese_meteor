@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P&subset=latin,greek,latin-ext,cyrillic);
+
+@font-face {
+    font-family: silkscreen; 
+    src: url("/fonts/silkscreen.ttf");
+}
+
+@media only screen and (max-width: 768px) {
+    html,body {
+        background: white !important;
+        font-family: 'silkscreen', 'Monda', sans-serif !important;
+    }
+    #about,#board,#resume {
+        background: transparent !important;
+    }
+    .color-primary:hover,  .color-primary {
+        color: black !important;
+    }
+    .bg-translucent {
+        background: transparent !important;
+    }
+    .modal-dialog .bg-translucent, .widget-container .bg-translucent {
+        background: white !important;
+    }
+    .bg-shadow-hover,.bg-shadow-hover:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) !important;
+    }
+    .bg-shadow-inverse {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) !important;
+    }
+    #new-item {
+        border-bottom: 2px solid rgba(0,0,0,0.3);
+    }
+    .divider {
+        border-bottom: 1px solid rgba(0,0,0,.3);
+    }
+    .widget-title {
+        color: white !important;
+    }    
+    #nav a, #footer h4, #footer a {
+        color: white !important;
+    }
+    #nav {
+        background: rgba(0, 0, 0, 0.7) !important;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) !important;
+    }
+    #footer {
+        background: rgba(0, 0, 0, 0.7) !important;
+    }
+    span.menu-bars {
+        color: white !important;
+    }
+    .contact-field, .contact-field:focus {
+        border: 1px solid  rgba(0,0,0,1);
+    }
+    .tl-point:before {
+        border-top: 4px solid black;
+    }
+    .tl-point-border-left, .tl-line {
+        border-left: 3px solid black;
+    }
+}

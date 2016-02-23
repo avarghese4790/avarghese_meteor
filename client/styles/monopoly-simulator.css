@@ -1,0 +1,11 @@
+#sim-control {
+    font-family: 'monda', sans-serif;
+}
+#sim-control {
+	margin: 80px 0 0 10px;
+}
+#results {
+	padding-left: 10px;
+	height: 100%;
+    width: 100%;
+}

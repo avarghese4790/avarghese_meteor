@@ -1,4 +1,5 @@
 <template name="careerRecharge">
+    {{>sharedNav}}
 	<div id="cr-product" class="text-center">
         <div class="col-md-12 product-section">
             <h1 id="cr-title" class="wow flip">Career <b>Recharge!</b></h1>
@@ -16,16 +17,12 @@
         	<a class="btn cr-btn wow pulse" data-wow-delay=".2s" href="https://www.fiverr.com/primrosee123/setup-a-mock-interview-with-you?funnel=9c6a9b94-679f-408f-be9c-23ea1593f561">Mock Interview</a>
         </div> 
 	</div>
-	<div id="cr-footer" class="text-center">
-            The AV Club, Published 2016
-	</div>
+    {{>sharedFooter}}
 	<script type="text/javascript">
 		new WOW().init();	  	
-		if(!Modernizr.touch){ $(window).stellar();}
 		$(function(){
 			$('body').removeClass('modal-open');
 			$('.modal-backdrop').remove();
-			if(!Modernizr.touch){ $(window).stellar('refresh');}
 		});
 	</script>
 </template>

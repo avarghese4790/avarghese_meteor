@@ -1,3 +1,6 @@
+#cr-product {
+	font-family: 'monda', sans-serif;
+}
 .cr-color-primary {
 	color: #1d2023;
 }
@@ -20,7 +23,7 @@
 }
 #cr-description {
     margin: 40px auto;
-    font-size: 20px;
+    font-size: 15px;
     max-width: 600px;
 }
 #cr-title {

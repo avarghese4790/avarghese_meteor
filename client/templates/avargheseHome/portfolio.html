@@ -1,0 +1,30 @@
+<template name="portfolio">
+	<div id="portfolio" class="section" data-stellar-background-ratio="0.2">
+		<div class="container">
+			<div class="row text-center">
+				<h1 class="color-variable color-primary wow fadeInDown">// Portfolio</h1>
+			</div>
+			<div id="mixitFilters" class="row text-center hide">
+				 <button class="filter bg-translucent bg-shadow-inverse color-variable color-primary wow fadeIn" data-filter="all">All</button>
+				 <button class="filter bg-translucent bg-shadow-inverse color-variable color-primary wow fadeIn" data-filter=".personal">Personal</button>
+				 <button class="filter bg-translucent bg-shadow-inverse color-variable color-primary wow fadeIn" data-filter=".professional">Professional</button>
+			</div>
+			<div id="mix-container" class="row">
+				{{#each portfolio}}
+					<div class="{{category}} {{display}} text-center portfolio-item-container wow bounceIn" data-wow-delay="{{wowDelay}}">
+						<a href="{{source}}" target="">
+							<div class="portfolio-item bg-shadow-hover bg-translucent bg-border bg-shadow bg-rounded text-center bg-cover">
+								<h2 class="bg-translucent bg-shadow color-variable color-primary">
+									{{title}}
+								</h2>
+								<div class="portfolio-icon margin-top color-variable color-primary wow rubberBand">
+									<i class="fa {{icon}}"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+				{{/each}}
+			</div>	
+		</div>
+	</div>
+</template>
