@@ -5,16 +5,16 @@
 				<h1 class="color-variable color-primary wow fadeInDown">// Portfolio</h1>
 			</div>
 			<div id="mixitFilters" class="row text-center hide">
-				 <button class="filter bg-translucent bg-shadow-inverse color-variable color-primary wow fadeIn" data-filter="all">All</button>
-				 <button class="filter bg-translucent bg-shadow-inverse color-variable color-primary wow fadeIn" data-filter=".personal">Personal</button>
-				 <button class="filter bg-translucent bg-shadow-inverse color-variable color-primary wow fadeIn" data-filter=".professional">Professional</button>
+				 <button class="filter bg-translucent bg-shadow-inverse av-color-variable color-primary wow fadeIn" data-filter="all">All</button>
+				 <button class="filter bg-translucent bg-shadow-inverse av-color-variable color-primary wow fadeIn" data-filter=".personal">Personal</button>
+				 <button class="filter bg-translucent bg-shadow-inverse av-color-variable color-primary wow fadeIn" data-filter=".professional">Professional</button>
 			</div>
 			<div id="mix-container" class="row">
 				{{#each portfolio}}
 				 	<div class="{{category}} {{display}} text-center portfolio-item-container wow bounceIn" data-wow-delay="{{wowDelay}}">
 						<a href="{{source}}" target="_blank">
 							<div class="portfolio-item bg-border bg-shadow bg-rounded text-center" style="background:url({{imgUrl}});" data-stellar-background-ratio="{{stellarRatio}}">
-								<h2 class="bg-translucent bg-shadow color-variable color-primary">{{title}}</h2>
+								<h2 class="bg-translucent bg-shadow av-color-variable color-primary">{{title}}</h2>
 							</div>
 						</a>
 					</div>
@@ -23,7 +23,7 @@
 					<div class="professional col-md-4 text-center portfolio-item-container wow bounceIn" data-wow-delay=".6s">
 						<a href="/admin">
 							<div class="portfolio-item bg-border bg-shadow bg-rounded text-center" style="background:url(http://i.imgur.com/cTWakG0.png);" data-stellar-background-ratio=".6">
-								<h2 class="bg-translucent bg-shadow color-variable color-primary" >Admin Console</h2>
+								<h2 class="bg-translucent bg-shadow av-color-variable color-primary" >Admin Console</h2>
 							</div>
 						</a>
 					</div>

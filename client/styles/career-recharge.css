@@ -1,3 +1,6 @@
+.cr-color-primary {
+	color: #1d2023;
+}
 .cr-btn {
     background: white;
     color: #1d2023;
@@ -43,6 +46,6 @@
 	color: white;
 	font-size: 25px;
 }
-#cr-bolt:hover {
+#cr-bolt i:hover {
 	animation-iteration-count: infinite;
 }

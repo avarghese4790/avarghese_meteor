@@ -4,6 +4,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Monda', sans-serif;
+    background: #1d1d1d;
 }
 .color-variable {
     -webkit-transition: 0.3s;
