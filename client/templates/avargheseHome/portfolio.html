@@ -4,15 +4,15 @@
 			<div class="row text-center">
 				<h1 class="color-variable color-primary wow fadeInDown">// Portfolio</h1>
 			</div>
-			<div id="mixitFilters" class="row text-center">
-				 <button class="filter bg-translucent bg-shadow-inverse bg-rounded bg-shadow-hover color-variable color-primary wow fadeIn" data-filter="all" data-wow-delay=".1s">All</button>
+			<div id="portfolio-filters" class="row text-center">
+				 <!-- <button class="filter bg-translucent bg-shadow-inverse bg-rounded bg-shadow-hover color-variable color-primary wow fadeIn" data-filter="all" data-wow-delay=".1s">All</button> -->
 				 <button class="filter bg-translucent bg-shadow-inverse bg-rounded bg-shadow-hover color-variable color-primary wow fadeIn" data-filter="demo" data-wow-delay=".3s">Demo</button>
 				 <button class="filter bg-translucent bg-shadow-inverse bg-rounded bg-shadow-hover color-variable color-primary wow fadeIn" data-filter="personal" data-wow-delay=".2s">Personal</button>
 				 <button class="filter bg-translucent bg-shadow-inverse bg-rounded bg-shadow-hover color-variable color-primary wow fadeIn" data-filter="professional" data-wow-delay=".3s">Professional</button>
 			</div>
-			<div id="mix-container" class="row">
+			<div id="portfolio-item-container" class="row">
 				{{#each portfolio}}
-					<div class="{{category}} {{display}} text-center portfolio-item-container wow bounceIn" data-wow-delay="{{wowDelay}}">
+					<div class="{{category}} {{display}} text-center portfolio-item-details-container wow bounceIn" data-wow-delay="{{wowDelay}}">
 						<a href="{{source}}" target="">
 							<div class="portfolio-item bg-shadow-hover bg-translucent bg-border bg-shadow bg-rounded text-center bg-cover">
 								<h2 class="bg-translucent bg-shadow color-variable color-primary">
@@ -26,7 +26,6 @@
 					</div>
 				{{/each}}
 			</div>
-			<div class="portfolio-items-placeholder display-none"></div>	
 		</div>
 	</div>
 </template>

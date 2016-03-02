@@ -77,15 +77,25 @@ Resume.insert({
 	company: 'Spireon Inc.',
 	location: 'Irving, TX ',
 	projects: ['Nspire Admin', 'Procon Server', 'Procon Core'],
-	environment: ['Mac OS', 'Linux', 'Groovy', 'Grails', 'Elastic Search', 'HTML', 'JavaScript', 'JQuery', 'AJAX', 'CSS', 'XML', 'MySQL', 'Agile', 'TDD', 'Spring MVC', 'REST', 'SOAP', 'OO', 'GIT', 'Bamboo', 'Cobertura', 'Nexus', 'Maven', 'Tomcat', 'Spock', 'JUnit', 'SoapUI', 'Postman', 'JIRA', 'Pivotal', 'MS PowerPoint/Word/Excel', 'Confluence Wiki'],
+	environment: ['Mac OS', 'Linux', 'M2M', 'Groovy', 'Grails', 'Elastic Search', 'CXF', 'HTML', 'JavaScript', 'JQuery', 'AJAX', 'CSS', 'XML', 'MySQL', 'Agile', 'TDD', 'Spring MVC', 'REST', 'SOAP', 'OO', 'GIT', 'Bamboo', 'Cobertura', 'Nexus', 'Maven', 'Tomcat', 'Spock', 'JUnit', 'SoapUI', 'Postman', 'JIRA', 'Pivotal', 'MS PowerPoint/Word/Excel', 'Confluence Wiki'],
 	wowDelay: '.4s',
 	imgUrl: 'http://i.imgur.com/k5TjDGY.png',
-	highlights: ['TODO: MAKE THIS STUFF SOUND GOOD',
-                  'Architectural work on platform',
-                  'created scripts as workarounds to current application logic gaps',
-                  'documenting troubleshooting, updating guides, creating scripts for quicker testing',
-                  'shifted priorities, worked around resource gaps',
-                  'customer support outside of role',
+	highlights: ['Migrated legacy code from previous code base, adhering to new coding standards and best practices',
+                  'Designed, developed, unit tested, and debugged application features as specified',
+                  'Supported development initiatives to enhance the core technology and improve customer experiences',
+                  'Traveled to California on multiple occasions to participate in scaled agile (SAFe) planning sessions',
+                  'Collaborated with core platform team to design architecture for new features',
+                  'Created scripts as workarounds to current application logic gaps',
+                  'Documented personal notes whenever possible, updating dev and onboarding guides', 
+                  'Created scripts for quicker testing, documented so that QA team members could easily reuse',
+                  'Dealt with shifting priorities, worked around resource gaps',
+                  'Worked with major carriers to setup m2m services, upgrade APIs, and troubleshoot customer issues',
+                  'Designed and developed audit capabilities for carrier service integrations',
+                  'Presented on multiple occasions including functional demos to upper management',
+                  'Participated in product backlog grooming sessions, including story estimations, tasking, and discussions',
+                  'Leveraged acquired technology knowledge to implement product solutions',
+                  'Led carrier integration efforts to upgrade carrier APIs and troubleshoot connectivity issues',
+                  'Supported other developers whenever possible, including code reviews, swarming, and presentations'
                   ]
 });
 Resume.insert({
@@ -94,14 +104,15 @@ Resume.insert({
 	                'Able to build complex solutions on time while working with offsite teams',
 	                'Experience in working on multiple projects, managing time and resources effectively',
 	                'Excellent problem-solver, able to quickly grasp complex systems and identify opportunities for improvements and resolution of critical issues',
-	                'Strong technical and interactive communication skills',
+	                'Strong technical and interactive communication skills able to express point of view as well as collaborate and listen',
 	                'Excellent collaboration skills',
 	                'Client-focused, interested in working with technology to solve business problems',
 	                'Quick learner and exceptionally hardworking at every task pursued',
 	                'Flexible and capable of performing well on team-oriented tasks and meeting deadlines',
 	                'Effective leadership skills with respect to influencing team members and delegating abilities',
 	                'Able to adapt and be successful in handling multiple responsibilities and roles in high-stress environments',
-	                'Experienced with working on distributed and N-Tier architecture']
+	                'Experienced with working on distributed and N-Tier architecture'
+                      ]
 });
 Resume.insert({
       category: 'technicalSkills',
@@ -160,7 +171,9 @@ Resume.insert({
                   'SAFe',
                   'Hibernate',
                   'Struts',
-                  'Mean.IO']
+                  'Mean.IO',
+                  'CXF',
+                  'M2M']
 });
 Resume.insert({
       category: 'technicalSkills',

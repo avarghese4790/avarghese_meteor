@@ -1,11 +1,15 @@
 /** THEME **/
 @import url(https://fonts.googleapis.com/css?family=Monda);
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
+@import url(https://fonts.googleapis.com/css?family=Jura:400,600,500);
 
 html,
 body {
     height: 100%;
     width: 100%;
-    font-family: 'monda', sans-serif;
+    font-family: 'Monda', sans-serif;
+    font-weight: 600;
     background: #1d1d1d;
 }
 .color-variable {
@@ -253,11 +257,9 @@ body {
     padding: 20px 20px 20px 0;
     cursor: pointer;
 }
-#mix-container {
+#portfolio-item-container {
     transition: 0.3s;
-}
-#mix-container .mix{
-    display: none;
+    min-height: 550px;
 }
 
 button .navbar-toggle,
@@ -346,14 +348,25 @@ h3 {
     margin: 0 10px;
     transition: 0.3s;
 }
+#footer-network-icons a i {
+    font-size: 15px;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
 #network-icons a i:hover {
     border-radius: 5px;
     border-left: 2px solid;
     border-right: 2px solid;
     transform: translateY(2px);
 }
+#footer-network-icons a i:hover {
+    border-radius: 5px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
     
-.portfolio-item-container {
+.portfolio-item-details-container {
     padding: 10px;
     height: 300px;
     min-width: 250px;
@@ -392,7 +405,7 @@ h3 {
 }
 
 #network-icons {
-    margin: 0px 25px;
+    margin: 0px 10px;
 }
 
 .bg-board {
@@ -426,15 +439,12 @@ h3 {
 button:focus {
     outline: 0 none;
 }
-#mixitFilters button {
+#portfolio-filters button {
     transition: 0.3s;
 }
 #portfolio {
     min-height: 100%;
     transition: 0.3s;
-}
-.portfolio-items-placeholder {
-    height: 850px;
 }
 #portfolio .container .row {
     padding: 10px 0;
@@ -695,6 +705,7 @@ input.valid, textarea.valid {
     margin-bottom: 15px;
     background-size: cover !important;
     background-position-x: center !important;
+    background-position-y: bottom !important;
 }
 #tl-point-current-details ul {
     padding: 10px 10px;
@@ -720,4 +731,21 @@ input.valid, textarea.valid {
     max-width: 50px;
     padding: 25px 0;
     margin-bottom: -75px;
+}
+#my-email {
+    transition: 0.3s;
+}
+#email-modal .modal-dialog {
+    max-width: 300px;
+}
+.my-email-hidden {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+}
+.typed-cursor {
+    animation: flash 1s infinite;
+}
+.fade {
+    opacity: 0;
 }

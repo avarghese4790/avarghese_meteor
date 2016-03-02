@@ -38,6 +38,6 @@ if(Portfolio.find({}).count() === 0){
  	icon: "fa-lock",
  	wowDelay: ".7s",
  	source: "/admin",
- 	display: "col-md-4"
+ 	display: "col-md-4 hide"
  });
 }
