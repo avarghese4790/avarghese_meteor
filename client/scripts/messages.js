@@ -5,19 +5,17 @@ Template.messages.events({
 	},
   'click #delete-message-btn' : function (e) {
       $('#messages').removeClass('animated bounceIn');
-      Messages.remove({_id:Session.get('selectedMessage')._id});
+      Meteor.call('removeMessage',{_id:Session.get('selectedMessage')._id});
       $('#messageModal').modal('hide');
       $('#messages').addClass('animated bounceIn');
   },
   'click #delete-all-messages-btn' : function () {
       $('#messages').removeClass('animated bounceIn');
-      Messages.find({},{fields: {'_id':1}}).forEach(function (message) {
-            Messages.remove({_id: message._id});
-      });
+      Meteor.call('removeMessage', {});
       $('#messages').addClass('animated bounceIn');
   },
   'click #export-messages-btn' : function(){
-      MessageExporter.exportAllMessages();
+      Meteor.call('exportMessages');
   }
 });
 

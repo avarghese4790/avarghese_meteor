@@ -1,4 +1,3 @@
-Locations.remove({});
 if(Locations.find().count() === 0){
     Locations.insert({
       name:"Maldives",
