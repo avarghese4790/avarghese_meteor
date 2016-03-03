@@ -2,7 +2,7 @@ Template.checklist.events({
 	'click #add-item-btn' : function () {
 		if($('#new-item').val()){
 			$('#checklist').removeClass('animated bounceIn');
-			Checklist.insert({
+			Meteor.call('insertChecklistItem', {
 				item: $('#new-item').val(),
 				date: new Date(),
 				completed: false
@@ -12,20 +12,22 @@ Template.checklist.events({
 		}
 	},
 	'click .delete-item-btn' : function (e) {
-		Checklist.remove({_id:e.currentTarget.id})
+		Meteor.call('removeChecklistItem', e.currentTarget.id);
 	},
 	'click .uncheck-item-btn' : function (e) {
-		var item = Checklist.findOne({_id:e.currentTarget.id});
+		var docId = e.currentTarget.id;
+		var item = Checklist.findOne({_id:docId});
 		item.completed = false;
 		item.lastModified = new Date();
-		Checklist.update(e.currentTarget.id, item)
+		Meteor.call('updateChecklistItem', docId, item);
 	},
 	'click .complete-item-btn' : function (e) {
-		var item = Checklist.findOne({_id:e.currentTarget.id});
-		item.item = $('input[id*='+e.currentTarget.id+']').val();
+		var docId = e.currentTarget.id;
+		var item = Checklist.findOne({_id:docId});
+		item.item = $('input[id*='+docId+']').val();
 		item.completed = true;
 		item.lastModified = new Date();
-		Checklist.update(e.currentTarget.id, item)
+		Meteor.call('updateChecklistItem', docId, item);
 	}
 	
 });

@@ -16,17 +16,12 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
 fortawesome:fontawesome
 twbs:bootstrap
 natestrauser:animate-css
 mrt:jquery-easing
 timmyg:wow
-keiths:octicons
-pagebakers:ionicons
 noorderstorm:stellar
-iamkevingreen:mixitup
 themeteorchef:jquery-validation
 iron:router
 accounts-base
@@ -36,7 +31,6 @@ aslagle:reactive-table
 fourseven:scss
 dbernhard:jquery-ui-draggable
 mrt:modernizr-meteor
-richsilv:owl-carousel
 benjaminrh:jquery-cookie
 harrison:papa-parse
 pfafman:filesaver

@@ -1,4 +1,3 @@
-Portfolio.remove({});
 if(Portfolio.find({}).count() === 0){
  Portfolio.insert({
  	category:"demo",
