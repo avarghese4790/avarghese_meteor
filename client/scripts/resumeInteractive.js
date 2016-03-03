@@ -59,13 +59,22 @@ Template.resumeInteractive.helpers({
 		return (category == 'education');
 	},
 	'qualificationHighlights' : function(){
-		return Resume.findOne({category:'qualificationHighlights'}).highlights;	
+		if(Resume.find({category: 'qualificationHighlights'}).fetch()[0]) {
+			return Resume.find({category: 'qualificationHighlights'}).fetch()[0].highlights;	
+		}
+		return [];
 	},
 	'technicalSkills' : function(skillCategory){
-		return Resume.findOne({skillCategory: skillCategory}).skills;	
+		if(Resume.find({skillCategory: skillCategory}).fetch()[0]) {
+			return Resume.find({skillCategory: skillCategory}).fetch()[0].skills;	
+		}
+		return [];
 	},
 	'technicalSkillCategories' : function(){
-		return Resume.findOne({category:'technicalSkillCategories'}).categories;	
+		if(Resume.find({category: 'technicalSkillCategories'}).fetch()[0]) {
+			return Resume.find({category: 'technicalSkillCategories'}).fetch()[0].categories;	
+		}
+		return [];
 	},
 	'_from' : function() {
 		if(Session.get('tl-point-details')){return Session.get('tl-point-details').from;}
