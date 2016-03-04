@@ -54,5 +54,10 @@ twbs:bootstrap                   3.3.6
 
 - Run the deploy command: ```DEPLOY_HOSTNAME=galaxy.meteor.com meteor deploy <host> --settings <settings.json>```
 
-
-
+###### SSL 
+- Add ssl package from app directory ```meteor add force-ssl```
+- Generate key: ```openssl genrsa -out av.meteorapp.com.key 2048```
+- Generate certificate signing request (CSR) from server: ```openssl req -new -sha256 -key av.meteorapp.com.key -out mav.meteorapp.com.csr```
+- Obtain CRT file and create PEM: ```openssl x509 -inform der -in av.meteorapp.com.crt -out av.meteorapp.com.crt.pem```
+- Concatenate key and PEM
+- In Progress...

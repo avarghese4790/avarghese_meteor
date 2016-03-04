@@ -1,5 +1,8 @@
 #m-sim-control {
-	margin: 70px 0 0 10px;
+	padding: 70px 0 0 10px;
+}
+#m-sim-control a {
+	margin: 10px 0;
 }
 #m-results {
 	padding: 20px;

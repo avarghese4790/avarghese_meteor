@@ -3,7 +3,8 @@ Template.about.onRendered(function(){
 	    strings: ["I'm a full stack developer with a passion for design, coding, and creating tangible deliverables through problem solving and creative thinking!"],
 	    typeSpeed: 0,
 	    loop: false,
-	    showCursor: false
+	    showCursor: false,
+	    startDelay: 3000
 	});
 });
 

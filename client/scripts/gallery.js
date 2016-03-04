@@ -16,13 +16,8 @@ Template.gallery.helpers({
   Template.gallery.events({
     'keyup #tg-loc-search-term': function() { 
         Session.set('tg-search-term', event.target.value);
-    }
-  });
-
-    Template.gallery.events({
+    },
     'change #tg-select-tag': function() { 
         Session.set('tg-filter-tag', event.target.value);
     }
   });
-
-

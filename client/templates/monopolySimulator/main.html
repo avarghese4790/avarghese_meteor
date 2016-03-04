@@ -1,11 +1,27 @@
 <template name="monopolySimulator">
 	{{>sharedNav}}
-    <div id="m-sim-control">
+    <div id="parameters-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content text-center bg-translucent bg-shadow-inverse bg-rounded">
+                <div class="modal-header">
+                    <h1 class="margin-top-0 color-variable color-primary">Parameters</h1>
+                    <button class="close-btn color-variable color-primary" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                     <div class="text-center">
+                       <a id="update-params-btn" href="#" class="btn color-variable color-primary btn-block btn-lg bg-translucent bg-shadow-inverse bg-rounded clean">Update</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div id="m-sim-control" class="bg-translucent">
         <h1 class="color-variable color-primary">Millionaire Monopoly Simulator</h1>
         <a onclick="Simulator.run();" class="bg-translucent btn btn-lg bg-shadow-inverse bg-shadow-hover bg-rounded color-variable color-primary">Run Simulator</a>
+<!--         <a href="#" class="bg-translucent btn btn-lg bg-shadow-inverse bg-shadow-hover bg-rounded color-variable color-primary" data-toggle="modal" data-target="#parameters-modal">Parameters</a> -->
+        <a id="results-clear-btn" href="#" class="bg-translucent btn btn-lg bg-shadow-inverse bg-shadow-hover bg-rounded color-variable color-primary">Clear Data</a>
+
     </div>
-	<hr>
-    <div id="m-container" class="container">
+    <div id="m-container" class="container bg-translucent">
+        <hr>    
         <div class="no-margin row">
             <div id="m-results" class="col-md-6 color-variable color-primary"></div>
         	<div id="m-board" class="col-md-6 img-responsive">
@@ -17,158 +33,167 @@
 	{{>sharedFooter}}
     <script type="text/javascript">
         $(document).scrollTop(0);
-		var Simulator = {
-        runInfo:{},
-        stats:{},
-        board: {},
-        players: {},
-        fortuneCards: {},
-        chanceCards: {},
-        millionaireCards: {},
-        initRunInfo: function(){
-            console.log("initializing game");
-            Simulator.runInfo['complete']=false;
-            Simulator.runInfo['winner']=null;
-            Simulator.runInfo['turns']=0;
-        },
-        rollDice: function () {
-            console.log("Rolling dice");
-            var die1 = Math.random() * 5 + 1;
-            var die2 = Math.random() * 5 + 1;
-            console.log("Rolled a " + Math.floor(die1 + die2));
-            return Math.floor(die1 + die2);
-        },
-        createFortuneCards: function () {
-            console.log("Creating fortune cards");
-            Simulator.fortuneCards[0] = {description: "Go Bankrupt"};
-            console.log("Created "
-                + Object.keys(Simulator.fortuneCards).length
-                + " Fortune card(s)");
-        },
-        createChanceCards: function () {
-            console.log("Creating chance cards");
-            Simulator.chanceCards[0] = {description: "Go directly to Jail"};
-            console.log("Created "
-                + Object.keys(Simulator.chanceCards).length
-                + " Chance card(s)");
-        },
-        createMillionaireCards: function () {
-            console.log("Creating millionaire cards");
-            Simulator.millionaireCards[0] = {description: "Get out of Jail Free"};
-            console.log("Created "
-                + Object.keys(Simulator.millionaireCards).length
-                + " Millionaire card(s)");
-        },
-        createBoard: function () {
-            console.log("creating board");
-            Simulator.board[0] = {name: "Go", rent: 0, owner: -1};
-            Simulator.board[1] = {name: "Motor Drive", rent: 80, owner: 1};
-            Simulator.board[2] = {name: "Millionaire", rent: 0, owner: -1};
-            Simulator.board[3] = {name: "Gadget Wharf", rent: 80, owner: 1};
-            Simulator.board[4] = {name: "Surfer's Cove", rent: 95, owner: 0};
-            Simulator.board[5] = {name: "Chance", rent: 0, owner: -1};
-            Simulator.board[6] = {name: "Aqua Park Resort", rent: 95, owner: 0};
-            Simulator.board[7] = {name: "Lakeside Marina", rent: 95, owner: 0};
-            Simulator.board[8] = {name: "Jail", rent: 0, owner: -1};
-            Simulator.board[9] = {name: "Castle View", rent: 215, owner: 1};
-            Simulator.board[10] = {name: "Dream Avenue", rent: 215, owner: 1};
-            Simulator.board[11] = {name: "Palace Gardens", rent: 215, owner: 1};
-            Simulator.board[12] = {name: "Adventure Park", rent: 270, owner: 0};
-            Simulator.board[13] = {name: "Millionaire", rent: 0, owner: -1};
-            Simulator.board[14] = {name: "Themepark City", rent: 270, owner: 0};
-            Simulator.board[15] = {name: "Movie District", rent: 270, owner: 0};
-            Simulator.board[16] = {name: "Free Parking", rent: 0, owner: -1};
-            Simulator.board[17] = {name: "Style Square", rent: 350, owner: 2};
-            Simulator.board[18] = {name: "Chance", rent: 0, owner: -1};
-            Simulator.board[19] = {name: "Party Plaza", rent: 350, owner: 2};
-            Simulator.board[20] = {name: "Showtime Boulevard", rent: 350, owner: 2};
-            Simulator.board[21] = {name: "Sunshine Bay", rent: 305, owner: 3};
-            Simulator.board[22] = {name: "Blink Beach", rent: 305, owner: 3};
-            Simulator.board[23] = {name: "Yacht Harbor", rent: 305, owner: 3};
-            Simulator.board[24] = {name: "Go To Jail", rent: 0, owner: -1};
-            Simulator.board[25] = {name: "Treetop Retreat", rent: 50, owner: 0};
-            Simulator.board[26] = {name: "Ski Mountain", rent: 50, owner: 1};
-            Simulator.board[27] = {name: "Millionaire", rent: 0, owner: -1};
-            Simulator.board[28] = {name: "Diamond Hills", rent: 50, owner: 1};
-            Simulator.board[29] = {name: "Chance", rent: 0, owner: -1};
-            Simulator.board[30] = {name: "Fortune Valley", rent: 550, owner: 0};
-            Simulator.board[31] = {name: "Paradise Island", rent: 550, owner: 0};
-            console.log("board created with "
-                + Object.keys(Simulator.board).length
-                + " tiles");
-        },
-        createPlayers: function () {
-            console.log("creating players");
-            Simulator.players[0] = {name: "Arun", balance: 200, position: 0, bankrupt: false};
-            Simulator.players[1] = {name: "Shawn", balance: 200, position: 0, bankrupt: false};
-            Simulator.players[2] = {name: "Shwetha", balance: 200, position: 0, bankrupt: false};
-            Simulator.players[3] = {name: "Jay", balance: 200, position: 0, bankrupt: false};
-            console.log(Object.keys(Simulator.players).length + " players have been created");
-        },
-        status: function () {
-            var bankruptPlayers = 0;
-            for (var key in Simulator.players) {
-                var player = Simulator.players[key];
-                if(player){
-                    console.log(player.name + "'s balance: $" +player.balance+"k");
-                    if(player.bankrupt){
-                        bankruptPlayers++;
-                    }
-                }
-            }
-            if(bankruptPlayers == Object.keys(Simulator.players).length-1){
+        var Simulator = {
+            runInfo:{},
+            stats:{},
+            board: {},
+            players: {},
+            fortuneCards: {},
+            chanceCards: {},
+            millionaireCards: {},
+            initRunInfo: function(){
+                console.log("initializing game");
+                Simulator.runInfo['complete']=false;
+                Simulator.runInfo['winner']=null;
+                Simulator.runInfo['turns']=0;
+            },
+            rollDice: function () {
+                console.log("Rolling dice");
+                var die1 = Math.random() * 5 + 1;
+                var die2 = Math.random() * 5 + 1;
+                console.log("Rolled a " + Math.floor(die1 + die2));
+                return Math.floor(die1 + die2);
+            },
+            createFortuneCards: function () {
+                console.log("Creating fortune cards");
+                Simulator.fortuneCards[0] = {description: "Go Bankrupt"};
+                console.log("Created "
+                    + Object.keys(Simulator.fortuneCards).length
+                    + " Fortune card(s)");
+            },
+            createChanceCards: function () {
+                console.log("Creating chance cards");
+                Simulator.chanceCards[0] = {description: "Go directly to Jail"};
+                console.log("Created "
+                    + Object.keys(Simulator.chanceCards).length
+                    + " Chance card(s)");
+            },
+            createMillionaireCards: function () {
+                console.log("Creating millionaire cards");
+                Simulator.millionaireCards[0] = {description: "Get out of Jail Free"};
+                console.log("Created "
+                    + Object.keys(Simulator.millionaireCards).length
+                    + " Millionaire card(s)");
+            },
+            createBoard: function () {
+                console.log("creating board");
+                Simulator.board[0] = {name: "Go", rent: 0, owner: -1};
+                Simulator.board[1] = {name: "Motor Drive", rent: 80, owner: 1};
+                Simulator.board[2] = {name: "Millionaire", rent: 0, owner: -1};
+                Simulator.board[3] = {name: "Gadget Wharf", rent: 80, owner: 1};
+                Simulator.board[4] = {name: "Surfer's Cove", rent: 95, owner: 0};
+                Simulator.board[5] = {name: "Chance", rent: 0, owner: -1};
+                Simulator.board[6] = {name: "Aqua Park Resort", rent: 95, owner: 0};
+                Simulator.board[7] = {name: "Lakeside Marina", rent: 95, owner: 0};
+                Simulator.board[8] = {name: "Jail", rent: 0, owner: -1};
+                Simulator.board[9] = {name: "Castle View", rent: 215, owner: 1};
+                Simulator.board[10] = {name: "Dream Avenue", rent: 215, owner: 1};
+                Simulator.board[11] = {name: "Palace Gardens", rent: 215, owner: 1};
+                Simulator.board[12] = {name: "Adventure Park", rent: 270, owner: 0};
+                Simulator.board[13] = {name: "Millionaire", rent: 0, owner: -1};
+                Simulator.board[14] = {name: "Themepark City", rent: 270, owner: 0};
+                Simulator.board[15] = {name: "Movie District", rent: 270, owner: 0};
+                Simulator.board[16] = {name: "Free Parking", rent: 0, owner: -1};
+                Simulator.board[17] = {name: "Style Square", rent: 350, owner: 2};
+                Simulator.board[18] = {name: "Chance", rent: 0, owner: -1};
+                Simulator.board[19] = {name: "Party Plaza", rent: 350, owner: 2};
+                Simulator.board[20] = {name: "Showtime Boulevard", rent: 350, owner: 2};
+                Simulator.board[21] = {name: "Sunshine Bay", rent: 305, owner: 3};
+                Simulator.board[22] = {name: "Blink Beach", rent: 305, owner: 3};
+                Simulator.board[23] = {name: "Yacht Harbor", rent: 305, owner: 3};
+                Simulator.board[24] = {name: "Go To Jail", rent: 0, owner: -1};
+                Simulator.board[25] = {name: "Treetop Retreat", rent: 50, owner: 0};
+                Simulator.board[26] = {name: "Ski Mountain", rent: 50, owner: 1};
+                Simulator.board[27] = {name: "Millionaire", rent: 0, owner: -1};
+                Simulator.board[28] = {name: "Diamond Hills", rent: 50, owner: 1};
+                Simulator.board[29] = {name: "Chance", rent: 0, owner: -1};
+                Simulator.board[30] = {name: "Fortune Valley", rent: 550, owner: 0};
+                Simulator.board[31] = {name: "Paradise Island", rent: 550, owner: 0};
+                console.log("board created with "
+                    + Object.keys(Simulator.board).length
+                    + " tiles");
+            },
+            createPlayers: function () {
+                console.log("creating players");
+                Simulator.players[0] = {name: "Arun", balance: 200, position: 0, bankrupt: false};
+                Simulator.players[1] = {name: "Shawn", balance: 200, position: 0, bankrupt: false};
+                Simulator.players[2] = {name: "Shwetha", balance: 200, position: 0, bankrupt: false};
+                Simulator.players[3] = {name: "Jay", balance: 200, position: 0, bankrupt: false};
+                console.log(Object.keys(Simulator.players).length + " players have been created");
+            },
+            status: function () {
+                var bankruptPlayers = 0;
                 for (var key in Simulator.players) {
                     var player = Simulator.players[key];
-                    if(player.balance > 0) {
-                        Simulator.runInfo['winner'] = player.name;
+                    if(player){
+                        console.log(player.name + "'s balance: $" +player.balance+"k");
+                        if(player.bankrupt){
+                            bankruptPlayers++;
+                        }
                     }
                 }
-                Simulator.runInfo['complete']=true;
-                console.log(Simulator.runInfo['winner'] + " is the winner after " + Simulator.runInfo['turns'] + " turns!");
-                Simulator.printRunInfo();
-                return true;
-
-            } else {
-                console.log(Object.keys(Simulator.players).length-bankruptPlayers + " players still in the game");
-            }
-        },
-        printRunInfo : function() {
-            $('#m-results').append(Simulator.runInfo['winner'] + " is the winner after " + Simulator.runInfo['turns'] + " turns! <br/>")
-        },
-        run: function () {
-            Simulator.initRunInfo();
-            Simulator.createFortuneCards();
-            Simulator.createChanceCards();
-            Simulator.createMillionaireCards();
-            Simulator.createPlayers();
-            Simulator.createBoard();
-            while(!Simulator.runInfo['complete']) {
-                for (var key in Simulator.players) {
-                    var player = Simulator.players[key];
-                    if (player.bankrupt) {
-                        continue;
+                if(bankruptPlayers == Object.keys(Simulator.players).length-1){
+                    for (var key in Simulator.players) {
+                        var player = Simulator.players[key];
+                        if(player.balance > 0) {
+                            Simulator.runInfo['winner'] = player.name;
+                        }
                     }
-                    console.log(player.name + "'s turn");
-                    var currentPosition = player.position + Simulator.rollDice();
-                    if (currentPosition > Object.keys(Simulator.board).length-1) {
-                        currentPosition -= Object.keys(Simulator.board).length-1;
-                    }
-                    var tile = Simulator.board[currentPosition];
-                    console.log(player.name + " landed on " + tile.name);
+                    Simulator.runInfo['complete']=true;
+                    console.groupEnd();
+                    console.groupEnd();
+                    console.log("%c" + Simulator.runInfo['winner'] + " is the winner after " + Simulator.runInfo['turns'] + " turns!", "font-size:15px");
+                    Simulator.printRunInfo();
+                    return true;
 
-                    if (Simulator.board[currentPosition].owner != key && tile.rent > 0 && !Simulator.players[tile.owner].bankrupt) {
-                        var propertyOwner = Simulator.players[tile.owner]
-                        console.log(tile.name + " is " + propertyOwner.name + "'s property");
-                        if (Simulator.players[key].balance - tile.rent < 0) {
-                            console.log(player.name + " owes " + propertyOwner.name + " $" + tile.rent +"k, but only has $" + player.balance+"k");
-                            Simulator.players[Simulator.board[currentPosition].owner].balance += Simulator.players[key].balance;
-                            Simulator.players[key].balance = 0;
-                            Simulator.players[key].bankrupt = true;
-                            console.log(player.name + " has gone bankrupt");
-                        } else {
-                            Simulator.players[key].balance -= tile.rent;
-                            Simulator.players[Simulator.board[currentPosition].owner].balance += tile.rent;
-                            console.log(player.name + " pays " + propertyOwner.name + " $" + tile.rent+"k");
+                } else {
+                    console.log(Object.keys(Simulator.players).length-bankruptPlayers + " players still in the game");
+                    console.groupEnd();
+                }
+            },
+            printRunInfo : function() {
+                $('#m-results').append(Simulator.runInfo['winner'] + " is the winner after " + Simulator.runInfo['turns'] + " turns! <br/>")
+            },
+            run: function () {                
+                console.groupCollapsed('Game');
+                console.time('Run Time');
+                console.groupCollapsed('Initialization');
+                Simulator.initRunInfo();
+                Simulator.createFortuneCards();
+                Simulator.createChanceCards();
+                Simulator.createMillionaireCards();
+                Simulator.createPlayers();
+                Simulator.createBoard();
+                console.groupEnd();
+                while(!Simulator.runInfo['complete']) {
+                    console.groupCollapsed('Round ' + (Simulator.runInfo['turns']+1));
+                    for (var key in Simulator.players) {
+                        var player = Simulator.players[key];
+                        if (player.bankrupt) {
+                            continue;
+                        }
+                        console.log(player.name + "'s turn");
+                        var currentPosition = player.position + Simulator.rollDice();
+                        if (currentPosition > Object.keys(Simulator.board).length-1) {
+                            currentPosition -= Object.keys(Simulator.board).length-1;
+                        }
+                        var tile = Simulator.board[currentPosition];
+                        console.log(player.name + " landed on " + tile.name);
+
+                        if (Simulator.board[currentPosition].owner != key && tile.rent > 0 && !Simulator.players[tile.owner].bankrupt) {
+                            var propertyOwner = Simulator.players[tile.owner]
+                            console.log(tile.name + " is " + propertyOwner.name + "'s property");
+                            if (Simulator.players[key].balance - tile.rent < 0) {
+                                console.log(player.name + " owes " + propertyOwner.name + " $" + tile.rent +"k, but only has $" + player.balance+"k");
+                                Simulator.players[Simulator.board[currentPosition].owner].balance += Simulator.players[key].balance;
+                                Simulator.players[key].balance = 0;
+                                Simulator.players[key].bankrupt = true;
+                                console.log(player.name + " has gone bankrupt");
+                            } else {
+                                Simulator.players[key].balance -= tile.rent;
+                                Simulator.players[Simulator.board[currentPosition].owner].balance += tile.rent;
+                                console.log(player.name + " pays " + propertyOwner.name + " $" + tile.rent+"k");
+                            }
                         }
                     }
                     Simulator.runInfo['turns']++;
@@ -176,8 +201,8 @@
                         break;
                     }
                 }
+                console.timeEnd('Run Time');
             }
         }
-    }
-	</script>
+    </script>
 </template>
