@@ -60,4 +60,7 @@
     .tl-point-border-left, .tl-line {
         border-left: 3px solid black;
     }
+    #board { 
+        box-shadow: none !important;
+    }
 }

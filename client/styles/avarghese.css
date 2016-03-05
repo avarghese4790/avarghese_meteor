@@ -10,7 +10,6 @@ body {
     width: 100%;
     font-family: 'Monda', sans-serif;
     font-weight: 600;
-    background: #1d1d1d;
 }
 .color-variable {
     -webkit-transition: 0.3s;
@@ -113,9 +112,9 @@ body {
 }
 
 /** AVARGHESE STYLES **/
-#page-wrap {
+#av-page-wrap {
     -webkit-transition: 0.3s;
-    transition: 0.3s;
+    transition: 0.5s;
     width: 100%;
     height: 100%;
 }
@@ -431,11 +430,6 @@ h3 {
     font-size: 25px;
     padding: 0 5px;
 }
-
-#aboutme-text p {
-    padding: 20px 30px;
-}
-
 button:focus {
     outline: 0 none;
 }
@@ -748,4 +742,36 @@ input.valid, textarea.valid {
 }
 .fade {
     opacity: 0;
+}
+.av-page-wrap-hidden {
+    opacity: 0;
+    visibility: none;
+    transform: translateY(-50px);
+}
+#loader {
+    background: white;
+    transition: 0.5s;
+    z-index: 999;
+}
+.loader-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+#aboutme-text p {
+    min-height: 140px;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 10px 30px;
+}
+.av-loading-icon {
+    font-size: 100px;
+    text-align: center;
+    color: black;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 40%;
+    bottom: 40%;
+
 }

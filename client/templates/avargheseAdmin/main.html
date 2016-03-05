@@ -1,18 +1,9 @@
 <template name="avargheseAdmin">
+	{{>loader}}
 	{{>avargheseAdminNav}}
 	{{#if notAuthorized}}
 		{{>notAuthorized}}
 	{{else}}
 		{{>widgets}}
 	{{/if}}
-	<script type="text/javascript">
-		new WOW().init();	  	
-		if(!Modernizr.touch){ $(window).stellar();}
-		$(function(){
-			$(window).stellar('refresh');
-			$('body').removeClass('modal-open');
-			$('.modal-backdrop').remove();
-			$(document).scrollTop(0);
-		});
-	</script>
 </template>
