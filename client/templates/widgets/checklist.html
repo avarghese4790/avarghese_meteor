@@ -7,7 +7,7 @@
 			<div class="widget-content bg-shadow bg-translucent bg-rounded text-center">
 				<div class="row">
 					<span class="col-md-1 col-xs-1">
-						<a id="add-item-btn" class="color-variable color-primary clean" href="#">
+						<a id="add-item-btn" class="color-variable color-primary clean">
 							 <i class="icon fa fa-plus"></i>
 						</a>
 					</span>
@@ -26,11 +26,11 @@
 							<li class="checklist-item">
 								<div class="row">
 									<span class="col-md-1 col-xs-1 text-left">
-										<a id="{{_id}}" class="complete-item-btn color-variable color-primary clean" href="#">
+										<a id="{{_id}}" class="complete-item-btn color-variable color-primary clean">
 											<i class="fa fa-square-o"></i>
 										</a>
 									</span>
-									<span class="col-md-10 col-xs-10 text-left color-variable color-primary">
+									<span class="col-md-9 col-xs-9 text-left color-variable color-primary">
 										<input id="{{_id}}" type="text" placeholder="item-name" value="{{item}}" class="item-name color-variable color-primary">
 									</span>
 								</div>
@@ -45,17 +45,17 @@
 							<li class="checklist-item">
 								<div class="row">
 									<span class="col-md-1 col-xs-1 text-left">
-										<a id="{{_id}}" class="uncheck-item-btn color-variable color-primary clean" href="#">
+										<a id="{{_id}}" class="uncheck-item-btn color-variable color-primary clean">
 											<i class="fa fa-check"></i>
+										</a>
+									</span>									
+									<span class="col-md-1 col-xs-1 text-left">
+										<a id="{{_id}}" class=" delete-item-btn color-variable color-primary clean">
+											<i class="fa fa-trash-o"></i>
 										</a>
 									</span>
 									<span class="col-md-8 col-xs-8 text-left item-completed color-variable color-primary">
 										{{item}}
-									</span>
-									<span class="col-md-2 col-xs-2 text-right">
-										<a id="{{_id}}" class=" delete-item-btn color-variable color-primary clean" href="#">
-											<i class="fa fa-trash-o"></i>
-										</a>
 									</span>
 								</div>
 							</li>

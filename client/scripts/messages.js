@@ -1,11 +1,17 @@
 Template.messages.events({
   'click .message' : function (e) {
-      Session.set('selectedMessage', Messages.findOne({_id: e.currentTarget.id}));
+      var id =  e.currentTarget.id;
+      var message = Messages.findOne({_id: id});
+      message.read = true;
+      Session.set('selectedMessage', message);
+      Meteor.call('updateMessage', id, message);
+      Session.set('newMessages', (Messages.find({read:false}).count() > 0));
       $('#messageModal').modal('show');
 	},
   'click #delete-message-btn' : function (e) {
       $('#messages').removeClass('animated bounceIn');
       Meteor.call('removeMessage',{_id:Session.get('selectedMessage')._id});
+      Session.set('newMessages', false);
       $('#messageModal').modal('hide');
       $('#messages').addClass('animated bounceIn');
   },
@@ -26,19 +32,22 @@ Template.messages.helpers({
   'selectedMessage': function(){
      return Session.get('selectedMessage');
   },
-  shortenName(name) {
+  'shortenName': function(name) {
     if(name.length > 8) {
      return name.substring(0, 6) + "..";
     }
     return name;
   },
-  messagePreview(message) {
+  'messagePreview': function(message) {
     if(message.length > 33) {
       return message.substring(0, 30) + "..";
     }
     return message;
   },
-  messagesExist(){
+  'messagesExist': function(){
     return (Messages.find({}).count() > 0);
+  },
+  'newMessage': function(message){
+    return !message.read;
   }
 });

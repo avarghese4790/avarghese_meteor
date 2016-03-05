@@ -184,7 +184,7 @@
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 #tg-content {
-	margin-top: 45px;
+	padding-top: 45px;
 }
 .tg-icon:hover, .tg-icon:active, .tg-icon:focus {
 	color: whitesmoke;
@@ -212,7 +212,9 @@
 	opacity: 0;
 	visibility: hidden;
 }
-
+.tg-bg-dark {
+	background-color: #262626;
+}
 
 .tg-front,
 .tg-back,
