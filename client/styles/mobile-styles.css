@@ -63,4 +63,10 @@
     #board { 
         box-shadow: none !important;
     }
+    #new-message-count {
+        display: none;
+    }
+    .widget-content {
+        max-width: 340px;
+    }
 }

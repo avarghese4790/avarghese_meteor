@@ -10,7 +10,7 @@
 					<!-- {{> reactiveTable collection=messages}} -->
 						{{#each messages}}
 							<li>
-								<a id="{{_id}}" class="message clean color-variable color-primary" href="#">
+								<a id="{{_id}}" class="message clean color-variable color-primary" data-toggle="modal" data-target="messageModal">
 									<div class="message-row col-md-12">
 										<span class="col-md-6 col-xs-6 text-left">
 											<i class="icon fa fa-user"></i>{{name}}
@@ -21,16 +21,19 @@
 										<br>
 										<span class="divider col-md-12 col-xs-12 text-left">
 											Message: {{messagePreview message}}
-										</span>	
+										</span>
+										{{#if newMessage this}}	
+											<span class="read"><i class="fa fa-exclamation"></i></span>
+										{{/if}}
 									</div>
 								</a>
 							</li>
 						{{/each}}
 					</ul>
-					<a id="delete-all-messages-btn" href="#" class="messages-btn col-md-6 color-variable color-primary clean">
+					<a id="delete-all-messages-btn" class="messages-btn col-md-6 color-variable color-primary clean">
 	                	<i class="icon fa fa-trash"></i>Clear
 	            	</a>
-					<a id="export-messages-btn" href="#" class="messages-btn col-md-6 color-variable color-primary clean">
+					<a id="export-messages-btn" class="messages-btn col-md-6 color-variable color-primary clean">
 	                	<i class="icon fa fa-external-link"></i>Export
 	            	</a>         
 				{{else}}

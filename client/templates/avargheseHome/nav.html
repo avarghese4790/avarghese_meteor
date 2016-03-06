@@ -1,7 +1,7 @@
  <template name="avargheseHomeNav">
     {{>login}}
     {{>user}}
-    <div id="nav" class="navbar navbar-fixed-top navbar-default wow fadeInDown bg-translucent bg-shadow">
+    <div id="nav" class="navbar navbar-fixed-top navbar-default fadeInDown bg-translucent bg-shadow">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -18,9 +18,26 @@
             <div id="user-info">   
                 <ul class="nav navbar-nav navbar-right">
                     {{#if currentUser}} 
-                        <li><a id="user-btn" class="color-variable color-primary nav-text" href="#" data-toggle="modal" data-target="#user-modal"><i class="icon fa fa-user"></i>{{currentUser.username}}</a> </li>
+                            <li>
+                                <a id="messages-btn" class="color-variable color-primary nav-text" href="/admin">
+                                    <i class="fa fa-fw fa-envelope"></i>
+                                    {{#if newMessages}}
+                                        <span id="new-message-count">{{newMessageCount}}</span>
+                                    {{/if}}
+                                </a>
+                            </li>
+                        
+                        <li>
+                            <a id="user-btn" class="color-variable color-primary nav-text" data-toggle="modal" data-target="#user-modal">
+                                <i class="icon fa fa-user"></i>{{currentUser.username}}
+                            </a>
+                        </li>
                     {{else}}
-                        <li><a id="login-btn" class="color-variable color-primary nav-text" href="#" data-toggle="modal" data-target="#login-modal"><i class="icon fa fa-sign-in"></i>Log In</a> </li>
+                        <li>
+                            <a id="login-btn" class="color-variable color-primary nav-text" data-toggle="modal" data-target="#login-modal">
+                                <i class="icon fa fa-sign-in"></i>Log In
+                            </a> 
+                        </li>
                     {{/if}}
                 </ul> 
             </div>                

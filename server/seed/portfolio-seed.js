@@ -9,7 +9,7 @@ if(Portfolio.find({}).count() === 0){
  });
   Portfolio.insert({
  	category:"demo",
- 	title: "Monopoly Simulator (Experimental)",
+ 	title: "Monopoly Simulator",
  	icon: "fa-usd",
  	wowDelay: ".4s",
  	source: "/monopoly",
