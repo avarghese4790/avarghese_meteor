@@ -1,39 +1,43 @@
 <template name="about">
-	<div id="about" class="section bg-about bg-cover stellar" data-stellar-background-ratio="0.5">
+	<div id="about" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row">
 				<div id="about-me" class="col-md-push-6 col-md-6">
-					<div id="aboutme-text" class="text-center text-shadow color-variable color-primary wow fadeIn" data-wow-delay="1s">
-						<h1 class="color-variable color-primary wow fadeInDown">// About Me</h1>
-	                    <div class="padded bg-translucent bg-shadow bg-shadow-hover bg-rounded color-variable color-primary">
-		                    <h2 class="wow rubberBand color-variable color-primary" data-wow-delay="1.1s">
+					<div id="aboutme-text" class="wow fadeIn" data-wow-delay="1s">
+						<h1 class="wow fadeInDown">// About Me</h1>
+	                    <div id="aboutme-content">
+		                    <h2 class="wow rubberBand" data-wow-delay="1.1s">
 		                    	Hello, <br>My Name is <b>Arun Varghese</b>
 		                    </h2>
-		                    <h2 class="wow fadeIn color-variable color-primary" data-wow-delay="1.2s">
+		                    <h2 class="wow fadeIn" data-wow-delay="1.2s">
 		                    	-Software Developer-
 		                    </h2>
-		                    <h4 class="wow fadeIn color-variable color-primary" data-wow-delay="1.3s">
+		                    <h4 class="wow fadeIn" data-wow-delay="1.3s">
 		                    	<i class="icon fa fa-map-marker"></i>[Dallas, Texas]
 		                    </h4>
-		                    <p class="wow fadeIn color-variable color-primary" data-wow-delay="1.4s">
+		                    <p class="wow fadeIn" data-wow-delay="1.4s">
 		                    	<span id="aboutme-summary"></span>
 		                    	<span class="typed-cursor">|</span>
 		                    </p>
 		                     <div id="network-icons" class="row padded text-center wow fadeIn" data-wow-delay="1.5s">
 				                 <a href="https://github.com/avarghese4790">
-				                    <i class="color-variable color-primary fa fa-fw fa-github-square wow flipInY" data-wow-delay="1.5s"></i>
+				                    <i class="fa fa-fw fa-github-square wow flipInY" data-wow-delay="1.5s"></i>
 				                 </a>
 				                 <a href="https://www.linkedin.com/in/varghesearun">
-				                    <i class="color-variable color-primary fa fa-fw fa-linkedin-square wow flipInY" data-wow-delay="1.6s"></i>
+				                    <i class="fa fa-fw fa-linkedin-square wow flipInY" data-wow-delay="1.6s"></i>
 				                 </a>
 								 <a href="https://www.facebook.com/avarghese1">
-				                    <i class="color-variable color-primary fa fa-fw fa-facebook-square wow flipInY" data-wow-delay="1.7s"></i>
+				                    <i class="fa fa-fw fa-facebook-square wow flipInY" data-wow-delay="1.7s"></i>
 				                 </a>
 				                 <a id="show-email-btn">
-				                    <i class="color-variable color-primary fa fa-fw fa-envelope wow flipInY" data-wow-delay="1.8s"></i>
+				                    <i class="fa fa-fw fa-envelope wow flipInY" data-wow-delay="1.8s"></i>
 				                 </a>
 				            </div>
-				            <div id="my-email" class="flipInX my-email-hidden"><i class="icon fa fa-envelope"></i>arunv4700@gmail.com</div>
+				            <div id="my-email" class="flipInX animated my-email-hidden">
+				            	<span>
+				            		<i class="icon fa fa-envelope"></i>arunv4700@gmail.com
+				            	</span>
+				            </div>
 	                    </div>
 	                </div>
 				</div>
@@ -41,8 +45,8 @@
 		</div>
 		<div class="section-footer text-center">
 			<a class="scroll scroll-down-btn" href="#resume">
-				<div class="color-variable color-primary text-center center-x">
-					<i id="scroll-icon" class="fa fa-angle-double-down wow fadeInDown infinite"></i>
+				<div>
+					<i class="fa fa-angle-double-down wow fadeInDown infinite"></i>
 				</div>
 			</a>
 		</div>

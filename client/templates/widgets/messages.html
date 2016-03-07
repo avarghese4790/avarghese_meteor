@@ -1,16 +1,15 @@
 <template name="messages">
 	<div id="messages" class="widget-half-size" data-wow-delay=".1s">
 		<div class="widget-container">
-			<h2 class="widget-title text-center center-x color-variable color-primary">
+			<h2 class="widget-title">
 				<i class="icon fa fa-envelope"></i>Messages
 			</h2>
-			<div class="widget-content bg-shadow bg-translucent bg-rounded text-center">
+			<div class="widget-content">
 				{{#if messagesExist}}
-					<ul id="message-list" class="clean">
-					<!-- {{> reactiveTable collection=messages}} -->
+					<ul id="message-list">
 						{{#each messages}}
 							<li>
-								<a id="{{_id}}" class="message clean color-variable color-primary" data-toggle="modal" data-target="messageModal">
+								<a id="{{_id}}" class="message" data-toggle="modal" data-target="messageModal">
 									<div class="message-row col-md-12">
 										<span class="col-md-6 col-xs-6 text-left">
 											<i class="icon fa fa-user"></i>{{name}}
@@ -19,7 +18,7 @@
 											<i class="icon fa fa-calendar-o"></i>{{formatDateShort date}}
 										</span>	
 										<br>
-										<span class="divider col-md-12 col-xs-12 text-left">
+										<span class="message-text col-md-12 col-xs-12">
 											Message: {{messagePreview message}}
 										</span>
 										{{#if newMessage this}}	
@@ -30,47 +29,49 @@
 							</li>
 						{{/each}}
 					</ul>
-					<a id="delete-all-messages-btn" class="messages-btn col-md-6 color-variable color-primary clean">
-	                	<i class="icon fa fa-trash"></i>Clear
-	            	</a>
-					<a id="export-messages-btn" class="messages-btn col-md-6 color-variable color-primary clean">
-	                	<i class="icon fa fa-external-link"></i>Export
-	            	</a>         
 				{{else}}
-					<h3 class="color-variable color-primary">No Messages :(</h3>
+					<h3 id="no-messages">No Messages :(</h3>
 				{{/if}}
 			</div>
+			<div id="message-ctrl" class="row">
+				<a id="delete-all-messages-btn" class="col-md-6">
+                	<i class="icon fa fa-trash"></i>Clear
+            	</a>
+				<a id="export-messages-btn" class="col-md-6">
+                	<i class="icon fa fa-external-link"></i>Export
+            	</a>       
+        	</div>  
 		</div>
 	</div>
 
-	<div id="messageModal" class="modal fade" role="dialog">
+	<div id="message-modal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
-		   	<div class="modal-content text-center bg-translucent bg-shadow-inverse bg-rounded">
+		   	<div class="modal-content">
 		   		<div class="modal-header">
-					<a class="close-btn color-variable color-primary" data-dismiss="modal"><i class="fa fa-times"></i></a>
+					<a class="modal-close-btn" data-dismiss="modal"><i class="fa fa-times"></i></a>
 				</div>
 				<div id="message-details" class="modal-body">
-					 <h2 class="center-x margin-bottom color-variable color-primary"><i class="icon fa fa-envelope"></i>Message Details</h2>
+					 <h2><i class="icon fa fa-envelope"></i>Message Details</h2>
 					 <div id="message-info" class="col-md-8">
-						 <h2 class="color-variable color-primary text-left"><i class="icon fa fa-user"></i>{{selectedMessage.name}}</h2>
-						 <h2 class="color-variable color-primary text-left"><i class="icon fa fa-envelope-o"></i>{{selectedMessage.email}}</h2>
-						 <h2 class="color-variable color-primary text-left"><i class="icon fa fa-calendar-o"></i>{{formatDate selectedMessage.date}}</h2>
+						 <h2><i class="icon fa fa-user"></i>{{selectedMessage.name}}</h2>
+						 <h2><i class="icon fa fa-envelope-o"></i>{{selectedMessage.email}}</h2>
+						 <h2><i class="icon fa fa-calendar-o"></i>{{formatDate selectedMessage.date}}</h2>
 						 <label></label>
 					 </div>
-					 <div id="message-body" class="col-md-12 bg-shadow-inverse bg-rounded margin-bottom">
-					 	<p class="color-variable color-primary">
+					 <div id="message-body" class="col-md-12">
+					 	<p>
 					 		{{selectedMessage.message}}
 					 	</p>
 					 </div>
 					 <label></label>
 					 <div class="row">
-	                        <a id="delete-message-btn" class="col-md-6 btn btn-lg color-variable color-primary bg-translucent bg-shadow-inverse bg-rounded clean">
+	                        <a id="delete-message-btn" class="col-md-6 btn btn-lg">
 	                        	<i class="icon fa fa-trash"></i>Delete
 	                        </a>
-	                        <a id="reply-message-btn" class="col-md-6 btn btn-lg color-variable color-primary bg-translucent bg-shadow-inverse bg-rounded clean">
+	                        <a id="reply-message-btn" class="col-md-6 btn btn-lg">
 	                        	<i class="icon fa fa-reply"></i>Reply
 	                        </a>
-	                        <p id="message-message" class="color-variable color-primary"></p>
+	                        <p id="message-message"></p>
                     </div>
 				</div>
 			</div>

@@ -1,11 +1,11 @@
 <template name="gallery">
-    <div id="tg-flip-cards-btn" class="tg-nav-btn bg-dark-1 text-center">
+    <div id="tg-flip-cards-btn" class="tg-nav-btn tg-bg-dark-1 text-center">
         <i class="fa fa-eye tg-icon tg-color-secondary "></i>
     </div>
-    <div id="tg-menu-btn" class="tg-nav-btn bg-dark-1 text-center">
+    <div id="tg-menu-btn" class="tg-nav-btn tg-bg-dark-1 text-center">
         <i id="tg-menu-icon" class="tg-icon tg-color-secondary fa fa-bars"></i>
     </div>
-    <div id="tg-filter-btn" class="tg-nav-btn bg-dark-1 text-center">
+    <div id="tg-filter-btn" class="tg-nav-btn tg-bg-dark-1 text-center">
         <i id="tg-filter-icon" class="tg-icon tg-color-secondary fa fa-filter"></i>
     </div>
     <div id="tg-nav" class="tg-bg-translucent">
@@ -43,7 +43,7 @@
     <div id="tg-gallery" class="col-sm-12 wow fadeIn">
         <ul class="col-sm-12 " ontouchstart="">
         {{#each locations}}
-            <li class="col-sm-3 bg-dark-2 clean wow fadeIn" data-wow-delay=".1s">
+            <li class="col-sm-3 tg-bg-dark-2 clean wow fadeIn" data-wow-delay=".1s">
                 <div class="tg-flip-container cover tg-flip">
                     <div id="tg-card" class="cover tg-front"> 
                         <div class="tg-img" style="background-image: url({{imgUrl}});"></div>

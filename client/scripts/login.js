@@ -5,7 +5,7 @@ Template.login.events({
 	    var password = $('#login-password').val();
 	    Meteor.loginWithPassword(username, password, function(err) {            
             if (Meteor.user()) {
-               $('.close-btn').click();
+               $('.modal-close-btn').click();
                 Router.go('/admin');
             } else {
               var message = "There was an error logging in: <strong>" + err.reason + "</strong>";

@@ -6,13 +6,25 @@
 	font-family: 'Monda', sans-serif;
 }
 .tg-bg-translucent {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7) !important;
 }
 .tg-color-primary {
-	color: white;
+	color: white !important;
+	&:hover {
+		color: #660000 !important;
+	}
 }
 .tg-color-secondary {
-	color: #660000;
+	color: #660000 !important;
+}
+.tg-bg-dark-1 {
+    background-color: #0d0d0d !important;
+}
+.tg-bg-dark-2 {
+    background-color: #1a1a1a !important;
+}
+.tg-bg-dark-3 {
+    background-color: #262626;
 }
 .tg-front, .tg-back {
 	position: absolute;
@@ -21,7 +33,8 @@
 }
 .tg-front {
 	z-index: 2;
-	background-color: #1a1a1a;
+	background-color: #1a1a1a !important;
+	box-shadow: inset 0 0 10px black;
 }
 .tg-back {
 	z-index: 1;
@@ -70,7 +83,7 @@
     z-index: 10;
 }
 .tg-nav-btn:hover, .tg-nav-btn:active, .tg-nav-btn:visited {
-	color: #660000;
+	color: #660000 !important;
 }
 #tg-description a .tg-icon{
 	font-size: 25px;
@@ -187,7 +200,7 @@
 	padding-top: 45px;
 }
 .tg-icon:hover, .tg-icon:active, .tg-icon:focus {
-	color: whitesmoke;
+	color: whitesmoke !important;
 }
 .tg-text-link:hover, .tg-text-link:active, .tg-text-link:focus {
 	color: #660000;
@@ -213,9 +226,13 @@
 	visibility: hidden;
 }
 .tg-bg-dark {
-	background-color: #262626;
+	background-color: #262626 !important;
 }
-
+#tg-gallery {
+	h2, h3 {
+		color: white !important;
+	}
+}
 .tg-front,
 .tg-back,
 .tg-nav-btn,

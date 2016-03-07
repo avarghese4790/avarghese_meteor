@@ -1,15 +1,15 @@
 <template name="user">
 	<div id="user-modal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
-		   	<div class="modal-content text-center bg-translucent bg-shadow-inverse bg-rounded">
+		   	<div class="modal-content">
 		   		<div class="modal-header">
-					<button class="close-btn color-variable color-primary"  data-dismiss="modal"><i class="fa fa-times"></i></button>
+					<button class="modal-close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
 				</div>
 				<div class="modal-body">
-					<h1 class="color-variable color-primary"><i class="fa fa-user"></i></h1>
-					<h1 class="color-variable color-primary">{{currentUser.username}}</h1>
-					<h2 class="color-variable color-primary">{{currentUser.email}}</h2>
-					<button id="logout-btn" type="submit" class="center-x btn color-variable color-primary btn-block btn-lg bg-translucent bg-shadow-inverse bg-rounded clean"><i class="icon fa fa-sign-out"></i>Signout</button>
+					<h1><i class="fa fa-user"></i></h1>
+					<h1>{{currentUser.username}}</h1>
+					<h2>{{currentUser.email}}</h2>
+					<button id="logout-btn" type="submit" class=" btn btn-block btn-lg"><i class="icon fa fa-sign-out"></i>Signout</button>
 				</div>
 			</div>
 		</div>
