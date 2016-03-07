@@ -97,6 +97,9 @@ Template.resumeInteractive.helpers({
 	'_environment' : function() {
 		if(Session.get('tl-point-details')){return Session.get('tl-point-details').environment;}
 	},
+	'_summary' : function() {
+		if(Session.get('tl-point-details')){return Session.get('tl-point-details').summary;}
+	},
 	'_highlights' : function() {
 		if(Session.get('tl-point-details')){return Session.get('tl-point-details').highlights;}
 	},
