@@ -822,10 +822,12 @@ h1,h2,h3,h4,h5,h6,
 .av-page-wrap-inactive {
     overflow: hidden;
     position: fixed;
-    transform: translateY(200px);
-    width: 85% !important;
+    transform: translateX(400px);
+    height: 85% !important;
     left: 0;
     right: 0;
+    top:0;
+    bottom: 0;
     margin: auto;
     box-shadow: 0 0 10px rgba(0,0,0,1);
 }

@@ -1,0 +1,95 @@
+.bg-cover {
+    width: 100%;
+    height: 100%;
+}
+.b-color-primary {
+    color: white !important;
+}
+.b-bg-rounded {
+    border-radius: 10px;
+}
+.b-bg-translucent {
+    background: rgba(0, 0, 0, 0.7);
+}
+.b-bg-shadow {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+.b-bg-shadow-inverse {
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3) 
+}
+.b-centered {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.b-ctrl-min {
+    width: 30px !important;
+    height: 30px !important;
+}
+#b-wrap {
+    @extend .bg-cover;
+    #b-ctrl {
+        @extend .b-centered, .b-bg-translucent, .b-bg-shadow-inverse, .b-bg-rounded;
+        width: 300px;
+        height: 250px;
+        padding: 10px;
+        transition: 0.3s;
+        z-index: 20;
+        font-family: 'Monda', sans-serif;
+        #b-ctrl-min-btn {
+            @extend .b-color-primary;
+        }
+        #b-ctrl-container {
+            width: 150px;
+            padding: 30px 0;
+            transition: 0.3s;
+            .row {
+                label {
+                    @extend .b-color-primary;
+                }
+                input {
+                    @extend .b-color-primary;
+                    float: right;
+                    border: none;
+                    width: 70px;
+                    background: transparent;
+                    border-bottom: 1px solid white;
+                    &:focus {
+                        border: none !important;
+                        outline: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+#b-block-overlay {
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    .b-block-row {
+        display: flex;
+        .b-block {
+            background: transparent;
+            margin: 0;
+            padding: 0;
+            height: 100px;
+            width: 100px;
+            display: inline-block !important;
+            border-radius: 10px;
+            transition: 15s;
+            &:hover {
+                box-shadow: 0 0 10px rgba(0,0,0,.5);    
+                transition: 0.1s !important;
+            }
+        }
+    }
+}
+
