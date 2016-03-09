@@ -380,7 +380,7 @@ h1,h2,h3,h4,h5,h6,
                     #aboutme-content {
                         @extend .padded-top-bottom, .bg-translucent, .bg-shadow, .bg-rounded;
                         &:hover {
-                            box-shadow: $shadow-size $color-2 !important;
+                            box-shadow: $shadow-size $color-2;
                         }
                         p {
                             min-height: 140px;
@@ -471,7 +471,7 @@ h1,h2,h3,h4,h5,h6,
                     .tl-point {
                         @extend .bg-translucent, .bg-shadow-inverse; 
                         &:hover {
-                            box-shadow: $shadow-size $color-2 !important;
+                            box-shadow: $shadow-size $color-2;
                             border-left: 3px solid white;
                             border-right: 3px solid white;
                         }
@@ -495,6 +495,9 @@ h1,h2,h3,h4,h5,h6,
             }
             #tl-point-details {
                 text-align: left;
+                h1,h2 {
+                    padding-top: 10px;
+                }
                 .tl-point-arrow {
                     font-size: 40px;
                     text-align: center;
@@ -521,7 +524,7 @@ h1,h2,h3,h4,h5,h6,
                     max-height: 180px;
                     overflow-y: scroll;
                     &:hover {
-                        box-shadow: $shadow-size $color-2 !important;
+                        box-shadow: $shadow-size $color-2;
                     }
                     li {
                         @extend .divider;
@@ -589,7 +592,7 @@ h1,h2,h3,h4,h5,h6,
                     height: 100%;
                     text-align: center;
                     &:hover {
-                        box-shadow: $shadow-size $color-2 !important;
+                        box-shadow: $shadow-size $color-2;
                     }
                     h2 {
                         @extend .bg-translucent, .bg-shadow;
@@ -634,7 +637,7 @@ h1,h2,h3,h4,h5,h6,
                 @extend .center-x, .bg-translucent, .bg-shadow-inverse, .bg-rounded;
                 max-width: 400px;
                 &:hover {
-                    box-shadow: $shadow-size $color-2 !important;
+                    box-shadow: $shadow-size $color-2;
                 }
             }
         }

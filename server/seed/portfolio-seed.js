@@ -13,7 +13,7 @@ if(Portfolio.find({}).count() === 0){
  	icon: "fa-usd",
  	wowDelay: ".4s",
  	source: "/monopoly",
- 	display: "col-md-4"
+ 	display: "col-md-4 hide"
  });
  Portfolio.insert({
  	category:"personal",

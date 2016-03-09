@@ -29,7 +29,11 @@ $m-color-2: white;
     #logout-btn {
         background: $m-color-2 !important;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) !important;
+        &:hover {
+            background: $m-color-2 !important;
+        }
     }
+
     #message-ctrl a, 
     #message-ctrl a i,
     .widget-title i,
@@ -37,6 +41,9 @@ $m-color-2: white;
     .contact-field,
     span {
         color: $m-color-1 !important;
+        &:hover{
+            color: $m-color-1 !important;
+        }
     }
     .portfolio-item h2 {
         color: $m-color-2 !important;
@@ -83,7 +90,7 @@ $m-color-2: white;
         color: white !important;
     }
     .contact-field, .contact-field:focus {
-        border: 1px solid  rgba(0,0,0,1);
+        border: 1px solid  rgba(0,0,0,1) !important;
     }
     .tl-point:before {
         border-top: 4px solid black;
