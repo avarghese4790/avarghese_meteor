@@ -7,6 +7,7 @@ Template.avargheseHomeNav.helpers({
 		return Session.get('newMessages');
 	},
 	'newMessageCount': function(){
-		return Messages.find({read:false}).count();
+		var count = Messages.find({read:false}).count();
+		if(count > 0){ return count;}
 	}
 });

@@ -4,100 +4,98 @@
 			<div id="tl-points-container" class="col-md-12 wow fadeInDown">
 				{{#each education}}
 					<div class="tl-point center-x wow bounceIn" data-wow-delay="{{wowDelay}}">
-						<div class="tl-point-overview text-center">
-							<h2 class="color-variable color-primary text-center center-x bounceIn">
+						<div class="tl-point-overview">
+							<h2 class="bounceIn">
 								<i class="fa fa-graduation-cap"></i>
 							</h2>
-							<h2 class="color-variable color-primary">{{degree}}</h2>
-							<h2 class="color-variable color-primary">{{specialty}}</h2>
-							<h3 class="color-variable color-primary">{{completed}}</h3>	
-							<h3 class="color-variable color-primary">{{school}}</h3>
-							<h3 class="color-variable color-primary">{{location}}</h3>
+							<h2>{{degree}}</h2>
+							<h2>{{specialty}}</h2>
+							<h3>{{completed}}</h3>	
+							<h3>{{school}}</h3>
+							<h3>{{location}}</h3>
 						</div>
 					</div>
-					<div class="tl-point-arrow color-variable color-primary text-center center-x bounceIn">
+					<div class="tl-point-arrow bounceIn">
 						<i class="fa fa-angle-double-down"></i>
 					</div>
 				{{/each}}
 				{{#each timeline}}
-					<a id="{{_id}}" class="expand-point clean color-variable color-primary">
-						<div class="tl-point tl-point-hover tl-point-border bg-translucent bg-shadow-inverse bg-shadow-hover center-x wow bounceIn" data-wow-delay="{{wowDelay}}">
-							<div class="tl-point-overview text-center">
-								<h2 class="color-variable color-primary wow fadeIn" data-wow-delay=".1s">{{company}}</h2>
-								<h3 class="color-variable color-primary wow fadeIn" data-wow-delay=".2s">{{location}}</h3>
-								<h3 class="color-variable color-primary wow fadeIn" data-wow-delay=".3s">{{from}} - {{to}}</h3>
-								<h3 class="color-variable color-primary wow fadeIn" data-wow-delay=".4s">{{role}}</h3>
+					<a id="{{_id}}" class="expand-point">
+						<div class="tl-point wow bounceIn" data-wow-delay="{{wowDelay}}">
+							<div class="tl-point-overview">
+								<h2 class="wow fadeIn" data-wow-delay=".1s">{{company}}</h2>
+								<h3 class="wow fadeIn" data-wow-delay=".2s">{{location}}</h3>
+								<h3 class="wow fadeIn" data-wow-delay=".3s">{{from}} - {{to}}</h3>
+								<h3 class="wow fadeIn" data-wow-delay=".4s">{{role}}</h3>
 							</div>
 						</div>
-						<div class="tl-point-arrow color-variable color-primary text-center center-x wow fadeInDown">
+						<div class="tl-point-arrow wow fadeInDown">
 							<i class="fa fa-angle-double-down"></i>
 						</div>
 					</a>
 				{{/each}}
 				<a id="tl-point-current">
 					<div class="text-center fadeInDown">
-						<i class="fa fa-user bg-rounded color-variable color-primary wow pulse infinite"></i>
+						<i class="fa fa-user wow pulse infinite"></i>
 					</div>
 				</a>
 			</div>	
-			<div id="tl-point-details" class="col-md-12 center-x tl-point-details-hidden display-none">
+			<div id="tl-point-details" class="col-md-12 tl-point-details-hidden display-none">
 				<a class="tl-point-rtn">
-					<div class="tl-point-arrow color-variable color-primary text-center center-x">
+					<div class="tl-point-arrow">
 						<i class="fa fa-angle-double-up wow fadeInUp"></i>
 					</div>
 				</a>
-				<div class="company-logo bg-circle bg-shadow" style="background:url({{_imgUrl}})"></div>
-				<h1 class="color-variable color-primary wow fadeInUp" data-wow-delay=".5s">{{_company}}</h1>
-				<h2 class="color-variable color-primary wow fadeInDown" data-wow-delay=".5s">{{_location}}</h2>
-				<h2 class="color-variable color-primary wow fadeInUp" data-wow-delay=".5s">{{_from}}-{{_to}}</h2>
-				<h2 class="color-variable color-primary wow fadeInDown" data-wow-delay=".5s">Role: {{_role}}</h2>
-				<h2 class="color-variable color-primary wow fadeInUp" data-wow-delay=".5s">Projects: {{_projects}}</h2>
-				<br>
-				<h3 class="color-variable color-primary wow fadeInDown" data-wow-delay=".5s">Environment: 
+				<div class="company-logo" style="background:url({{_imgUrl}})"></div>
+				<h1 class="wow fadeInUp" data-wow-delay=".5s">{{_company}}</h1>
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">{{_location}}</h2>
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">{{_from}}-{{_to}}</h2>
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">Role: {{_role}}</h2>
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">Projects: {{_projects}}</h2>
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">Environment:</h2>
 				{{#each _environment}}
-					<div class="badge bg-translucent bg-shadow-inverse color-variable color-primary wow bounceIn" data-wow-delay=".5s">
+					<div class="badge wow bounceIn" data-wow-delay=".5s">
 						{{this}}
 					</div>
 				{{/each}}
-				</h3>
-				<br>
-				<h3 class="color-variable color-primary wow fadeInUp" data-wow-delay=".5s">Highlights:</h3> 
-				<ul id="job-highlights" class="bg-translucent bg-shadow-inverse bg-shadow-hover bg-rounded clean">
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">Summary:</h2>
+				<p class="wow fadeInUp">{{_summary}}</p>
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">Highlights:</h2> 
+				<ul id="job-highlights">
 					{{#each _highlights}}
-						<li class="color-variable color-primary fadeIn divider" data-wow-delay=".5s">
+						<li class="fadeIn" data-wow-delay=".5s">
 							<i class="fa-li fa fa-square"></i>{{this}}
 						</li>
 					{{/each}}
-					<li id="bottom"></li>
 				</ul>
 				<a class="tl-point-rtn">
-					<div class="tl-point-arrow color-variable color-primary text-center center-x">
+					<div class="tl-point-arrow">
 						<i class="fa fa-angle-double-up wow fadeInUp infinite"></i>
 					</div>
 				</a>
 			</div>
 			<div id="tl-point-current-details" class="tl-point-current-details-hidden col-md-12 fadeInUp display-none">
 				<a class="tl-point-current-rtn">
-					<div class="tl-point-arrow color-variable color-primary text-center center-x">
+					<div class="tl-point-arrow">
 						<i class="fa fa-angle-double-up wow fadeInUp"></i>
 					</div>
 				</a>
-				<h2 class="color-variable color-primary wow fadeInUp" data-wow-delay=".5s">Highlight of Qualifications</h2>
-				<ul class="bg-translucent bg-shadow-inverse bg-rounded bg-shadow-hover clean wow fadeIn">
+				<h2 class="wow fadeInUp" data-wow-delay=".5s">Highlight of Qualifications</h2>
+				<ul id="qualification-highlights" class="wow fadeIn">
 					{{#each qualificationHighlights}}
-		                <li class="color-variable color-primary wow fadeIn divider">
+		                <li class="wow fadeIn">
 		                	{{this}}
 		                </li>	                
 	                {{/each}}
             	</ul>
             	<br>
-            	<h2 class="color-variable color-primary wow fadeInUp" data-wow-delay=".5s">Technical Skills</h2>
+            	<h2 class="wow fadeInUp" data-wow-delay=".5s">Technical Skills</h2>
             	<div class="row">
             		{{#each technicalSkillCategories}}
             			<div class="col-md-6 technical-skills">     
-                        	<h4 class="technical-skill color-variable color-primary wow fadeInUp">{{this}}</h4>
+                        	<h4 class="technical-skill wow fadeInUp">{{this}}</h4>
                         	{{#each technicalSkills this}}                        		
-                        		<div class="badge bg-translucent bg-shadow-inverse color-variable color-primary wow bounceIn">
+                        		<div class="badge wow bounceIn">
                         			{{this}}
                         		</div>
                         	{{/each}}
@@ -105,7 +103,7 @@
             		{{/each}}
                 </div>
                 <a class="tl-point-current-rtn">
-					<div class="tl-point-arrow color-variable color-primary text-center center-x">
+					<div class="tl-point-arrow">
 						<i class="fa fa-angle-double-up wow fadeInUp infinite"></i>
 					</div>
 				</a>

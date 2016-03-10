@@ -1,37 +1,37 @@
 <template name="checklist">
 	<div id="checklist" class="widget-half-size" data-wow-delay=".1s">
 		<div class="widget-container">
-			<h2 class="widget-title text-center center-x color-variable color-primary">
+			<h2 class="widget-title">
 				<i class="icon fa fa-list"></i>My Checklist
 			</h2>
-			<div class="widget-content bg-shadow bg-translucent bg-rounded text-center">
+			<div class="widget-content">
 				<div class="row">
 					<span class="col-md-1 col-xs-1">
-						<a id="add-item-btn" class="color-variable color-primary clean">
+						<a id="add-item-btn">
 							 <i class="icon fa fa-plus"></i>
 						</a>
 					</span>
 					<span class="col-md-10 col-xs-10">
-						<input id="new-item" type="text" placeholder="New item" class="color-variable color-primary">
+						<input id="new-item" type="text" placeholder="New item">
 					</span>						
 				</div>
 				<div class="item-lists">
 					{{#if itemsExist}}
-						<h2 class="color-variable color-primary text-left">Items:</h2>
+						<h2>Items:</h2>
 					{{else}}
-						<h2 class="color-variable color-primary text-left">Add something!</h2>
+						<h2>Add something!</h2>
 					{{/if}}
-					<ul class="clean no-space text-left">
+					<ul>
 						{{#each items}}
 							<li class="checklist-item">
 								<div class="row">
-									<span class="col-md-1 col-xs-1 text-left">
-										<a id="{{_id}}" class="complete-item-btn color-variable color-primary clean">
+									<span class="col-md-1 col-xs-1">
+										<a id="{{_id}}" class="complete-item-btn">
 											<i class="fa fa-square-o"></i>
 										</a>
 									</span>
-									<span class="col-md-9 col-xs-9 text-left color-variable color-primary">
-										<input id="{{_id}}" type="text" placeholder="item-name" value="{{item}}" class="item-name color-variable color-primary">
+									<span class="col-md-9 col-xs-9">
+										<input id="{{_id}}" type="text" placeholder="item-name" value="{{item}}" class="item-name">
 									</span>
 								</div>
 							</li>
@@ -40,21 +40,21 @@
 					{{#if anyCompleted}}
 						<hr>
 					{{/if}}	
-					<ul class="clean no-space text-left">
+					<ul>
 						{{#each completed}}
 							<li class="checklist-item">
 								<div class="row">
-									<span class="col-md-1 col-xs-1 text-left">
-										<a id="{{_id}}" class="uncheck-item-btn color-variable color-primary clean">
+									<span class="col-md-1 col-xs-1">
+										<a id="{{_id}}" class="uncheck-item-btn">
 											<i class="fa fa-check"></i>
 										</a>
 									</span>									
-									<span class="col-md-1 col-xs-1 text-left">
-										<a id="{{_id}}" class=" delete-item-btn color-variable color-primary clean">
+									<span class="col-md-1 col-xs-1">
+										<a id="{{_id}}" class="delete-item-btn">
 											<i class="fa fa-trash-o"></i>
 										</a>
 									</span>
-									<span class="col-md-8 col-xs-8 text-left item-completed color-variable color-primary">
+									<span class="col-md-8 col-xs-8 item-completed">
 										{{item}}
 									</span>
 								</div>

@@ -6,13 +6,13 @@ Template.messages.events({
       Session.set('selectedMessage', message);
       Meteor.call('updateMessage', id, message);
       Session.set('newMessages', (Messages.find({read:false}).count() > 0));
-      $('#messageModal').modal('show');
+      $('#message-modal').modal('show');
 	},
   'click #delete-message-btn' : function (e) {
       $('#messages').removeClass('animated bounceIn');
       Meteor.call('removeMessage',{_id:Session.get('selectedMessage')._id});
       Session.set('newMessages', false);
-      $('#messageModal').modal('hide');
+      $('#message-modal').modal('hide');
       $('#messages').addClass('animated bounceIn');
   },
   'click #delete-all-messages-btn' : function () {

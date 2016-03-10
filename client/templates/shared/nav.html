@@ -1,21 +1,19 @@
 <template name="sharedNav">
-    {{>login}}
-    {{>user}}
-	<div id="nav" class="navbar navbar-fixed-top navbar-default fadeInDown bg-translucent  bg-shadow">
+	<div id="nav" class="navbar navbar-fixed-top navbar-default fadeInDown bg-translucent bg-shadow">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="menu-bars fa fa-bars color-variable color-primary"></span>
+                <span class="menu-bars fa fa-bars"></span>
             </button>
-            <a class="navbar-brand scroll color-variable color-primary nav-text" href="/"><i class="fa fa-hashtag"></i>AV</a>
+            <a class="navbar-brand scroll nav-text" href="/"><i class="fa fa-hashtag"></i>AV</a>
         </div>
-        <div class="navbar-collapse collapse bg-translucent" id="bs-navbar">
+        <div class="navbar-collapse collapse" id="bs-navbar">
             <div id="user-info">   
                 <ul class="nav navbar-nav navbar-right">
                     {{#if currentUser}} 
-                        <li><a id="user-btn" class="color-variable color-primary nav-text" data-toggle="modal" data-target="#user-modal"><i class="icon fa fa-user"></i>{{currentUser.username}}</a> </li>
+                        <li><a id="user-btn" class="nav-text" data-toggle="modal" data-target="#user-modal"><i class="icon fa fa-user"></i>{{currentUser.username}}</a> </li>
                     {{else}}
-                        <li><a id="login-btn" class="color-variable color-primary nav-text" data-toggle="modal" data-target="#login-modal"><i class="icon fa fa-sign-in"></i>Log In</a> </li>
+                        <li><a id="login-btn" class="nav-text" data-toggle="modal" data-target="#login-modal"><i class="icon fa fa-sign-in"></i>Log In</a> </li>
                     {{/if}}
                 </ul> 
             </div>                

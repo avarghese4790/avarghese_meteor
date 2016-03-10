@@ -3,24 +3,65 @@
     src: url("/fonts/silkscreen.ttf");
 }
 
+$m-color-1: black;
+$m-color-2: white;
+
 @media only screen and (max-width: 768px) {
-    html,body {
+	i,a,h1,h2,h3,h4,h5,h6,p,input,li,button {
+	    color: $m-color-1 !important;
+	    &:hover {
+	        color: $m-color-1 !important;
+	    }
+	}
+    #not-authorized,
+    #login-submit-btn,
+    #aboutme-content,
+    .expand-point .tl-point,
+    .widget-content,
+    #widgets,
+    #job-highlights,
+    #qualification-highlights,
+    .badge,
+    .filter,
+    .portfolio-item,
+    #submit-msg-btn,
+    .contact-field,
+    #logout-btn {
+        background: $m-color-2 !important;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) !important;
+        &:hover {
+            background: $m-color-2 !important;
+        }
+    }
+
+    #message-ctrl a, 
+    #message-ctrl a i,
+    .widget-title i,
+    .badge,
+    .contact-field,
+    span {
+        color: $m-color-1 !important;
+        &:hover{
+            color: $m-color-1 !important;
+        }
+    }
+    .portfolio-item h2 {
+        color: $m-color-2 !important;
+    }
+    #nav a, #nav i, #footer h4, #footer a, #footer i {
+        color: $m-color-2 !important;
+    }
+        html,body {
         background: white !important;
         font-family: 'silkscreen', 'Monda', sans-serif !important;
     }
     #about,#board,#resume {
         background: transparent !important;
     }
-    .color-primary:hover, .color-primary {
-        color: black !important;
-    }
-    .color-secondary:hover, .color-secondary {
-        color: black !important;
-    }
     .bg-translucent {
         background: transparent !important;
     }
-    .modal-dialog .bg-translucent, .widget-container .bg-translucent {
+    .modal-content, .widget-container .bg-translucent {
         background: white !important;
     }
     .bg-shadow-hover,.bg-shadow-hover:hover {
@@ -38,9 +79,6 @@
     .widget-title {
         color: white !important;
     }    
-    #nav a, #footer h4, #footer a {
-        color: white !important;
-    }
     #nav {
         background: rgba(0, 0, 0, 0.7) !important;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) !important;
@@ -52,7 +90,7 @@
         color: white !important;
     }
     .contact-field, .contact-field:focus {
-        border: 1px solid  rgba(0,0,0,1);
+        border: 1px solid  rgba(0,0,0,1) !important;
     }
     .tl-point:before {
         border-top: 4px solid black;
