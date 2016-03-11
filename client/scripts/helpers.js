@@ -27,5 +27,8 @@ Template.registerHelper('notAuthorized', function(){
     if(!user) {
       return true;
     }
+    if(!Roles.userIsInRole(user,['admin'], 'default-group')) {
+      return true;
+    }
     return false;
 });

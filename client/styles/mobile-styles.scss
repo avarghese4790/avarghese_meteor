@@ -15,6 +15,7 @@ $m-color-2: white;
 	}
     #not-authorized,
     #login-submit-btn,
+    #register-submit-btn,
     #aboutme-content,
     .expand-point .tl-point,
     .widget-content,
@@ -75,10 +76,7 @@ $m-color-2: white;
     }
     .divider {
         border-bottom: 1px solid rgba(0,0,0,.3);
-    }
-    .widget-title {
-        color: white !important;
-    }    
+    } 
     #nav {
         background: rgba(0, 0, 0, 0.7) !important;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) !important;

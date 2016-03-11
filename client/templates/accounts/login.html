@@ -7,18 +7,28 @@
                     <button class="modal-close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
                 </div>
                 <div class="modal-body">
-                    <form id="login-form" class="row">
-                        <div class="col-md-6">
-                            <label></label>
-                            <input id="login-username" type="text" class="login-field form-control" placeholder="Username" required> 
+                    <form id="login-form">
+                        <div class="row fields">
+                            <div class="col-md-6">
+                                <label></label>
+                                <input id="login-username" type="text" class="login-field form-control" placeholder="Username" required> 
+                            </div>
+                            <div class="col-md-6">
+                                <label></label>
+                                <input id="login-password" type="password" class="login-field form-control" placeholder="Password" required>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label></label>
-                            <input id="login-password" type="password" class="login-field form-control" placeholder="Password">
-                        </div>
-                        <div class="col-md-12">
-                            <label></label>
-                            <button id="login-submit-btn" type="submit" class="btn btn-block btn-lg">Submit</button>
+                        <div class="row buttons">
+                            <div class="col-md-6">
+                                <a id="register-submit-btn" class="btn btn-block btn-lg">
+                                    <i class="icon fa fa-user"></i>Register
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <button id="login-submit-btn" type="submit" class="btn btn-block btn-lg">
+                                    <i class="icon fa fa-sign-in"></i>Log In
+                                </button>
+                            </div>
                         </div>
                         <p id="login-message"></p>
                     </form>

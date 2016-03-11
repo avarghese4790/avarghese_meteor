@@ -1,4 +1,5 @@
 Template.avargheseHome.onRendered(function(){
+	Notification.requestPermission(function(status) {});
 	new WOW().init();
 	$(window).stellar();	
 	$(function(){
