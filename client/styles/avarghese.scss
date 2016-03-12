@@ -588,10 +588,16 @@ h1,h2,h3,h4,h5,h6,
         }
         #portfolio-item-container {
             min-height: 550px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
             .portfolio-item-details-container {
                 padding: 10px;
                 height: 300px;
-                min-width: 250px;
+                width: 350px;
                 .portfolio-item {
                     @extend .bg-translucent, .bg-shadow, .bg-border, .bg-rounded;
                     width: 100%;
@@ -614,9 +620,7 @@ h1,h2,h3,h4,h5,h6,
                         }
                     }
                     &:hover {
-                        width: 101%;
-                        height: 101%;
-                        transform: translateX(-5px) translateY(-5px); 
+                        transform: scale(1.05);       
                     }
                 }
             }
