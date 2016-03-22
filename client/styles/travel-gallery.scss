@@ -85,7 +85,7 @@
 .tg-nav-btn:hover, .tg-nav-btn:active, .tg-nav-btn:visited {
 	color: #660000 !important;
 }
-#tg-description a .tg-icon{
+#tg-description .tg-icon{
 	font-size: 25px;
 }
 	
@@ -164,9 +164,10 @@
 	z-index: 11;
 }
 #tg-description {
-	text-align: center;
-	position: relative;
-	top: 35%;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	position: absolute;
 }
 #tg-intro-popup {
 	width: 40%;
@@ -177,14 +178,15 @@
     z-index: 20;
 }
 #tg-intro-close-btn {
-    top: -3px;
-    right: 3px;
+    top: 0;
+    right: 5px;
     font-size: 20px;
 	position: absolute;
 }
 #tg-intro-message {
-    padding: 10px;
+    padding: 15px;
 	font-size: 20px;
+	color: white;
 }
 #tg-gallery {
 	background: #2d2d2d;

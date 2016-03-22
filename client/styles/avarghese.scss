@@ -14,6 +14,49 @@ $default-bottom-margin: 20px;
 $color-error: #E18989;
 $color-success: $color-2;
 
+.layout {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: red;
+}
+.layout-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+.layout-row {
+    display: flex;
+    justify-content: center;
+}
+.av-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+    li {
+        transform: scale(1.1);
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        @extend .shadow;
+/*        &:hover {
+            transform: scale(1.02);
+            transform: rotate(3deg);
+        }*/
+    }
+}
+
 /*GENERAL STYLINGS*/
 .animated {
     transition: 0.3s;
@@ -171,7 +214,7 @@ ul,li,span
 a,p,input,button,
 h1,h2,h3,h4,h5,h6,
 #portfolio,
-#av-page-wrap,
+#page-wrap,
 #logout-btn, 
 #user-btn,
 #user,
@@ -825,11 +868,11 @@ h1,h2,h3,h4,h5,h6,
     right: 0;
     top: 0;
 }
-#av-page-wrap {
+#page-wrap {
     @extend .cover;
     transition-timing-function: cubic-bezier(0, 1.5, 0.5, 1);
 }
-.av-page-wrap-inactive {
+.page-wrap-inactive {
     overflow: hidden;
     position: fixed;
     transform: translateX(400px);
@@ -841,7 +884,7 @@ h1,h2,h3,h4,h5,h6,
     margin: auto;
     box-shadow: 0 0 10px rgba(0,0,0,1);
 }
-.av-page-wrap-hidden {
+.page-wrap-hidden {
     opacity: 0;
     visibility: none;
     transform: translateY(-50px);

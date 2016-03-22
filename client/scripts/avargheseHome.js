@@ -6,13 +6,6 @@ Template.avargheseHome.onRendered(function(){
 		$(window).stellar('refresh');
 		$('body').removeClass('modal-open');
 		$('.modal-backdrop').remove();
-		setTimeout(function(){
-		   $('#loader').addClass('loader-hidden');
-		   $('#av-page-wrap').removeClass('av-page-wrap-hidden');
-		}, 500);
-		setTimeout(function(){
-			$('#loader').addClass('display-none');
-		}, 800);
 	});
 	$(document).ready(function(){
 		if ($.cookie(Router.current().route.path()+"scroll") !== null) {
