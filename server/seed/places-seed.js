@@ -1,6 +1,16 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
+      "Colorado": {
+        "name":"Colorado",
+        "date":"2015-04-09",
+        "description":"a description",
+        "imgUrl":"http://i.imgur.com/x8f8KgRh.jpg",
+        "rank": 1,
+        "tags": "tropical,resort,water-sports",
+        "places": "",
+        "source": "http://imgur.com/a/AHnS7"
+      },        
       "Maldives": {
         "name":"Maldives",
         "date":"2015-06-16",
