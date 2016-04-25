@@ -18,13 +18,14 @@
             <div id="user-info">   
                 <ul class="nav navbar-nav navbar-right">
                     {{#if currentUser}} 
+                        {{#if authorized}}    
                             <li>
                                 <a id="messages-btn" class="nav-text" href="/admin">
                                     <i class="fa fa-fw fa-envelope"></i>
                                     <span id="new-message-count">{{newMessageCount}}</span>
                                 </a>
                             </li>
-                        
+                        {{/if}}
                         <li>
                             <a id="user-btn" class="nav-text" data-toggle="modal" data-target="#user-modal">
                                 <i class="icon fa fa-user"></i>{{currentUser.username}}

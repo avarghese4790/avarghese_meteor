@@ -15,8 +15,11 @@ Template.registerHelper('formatDateWithSeconds', function(date){
 });
 
 Template.registerHelper('authorized', function(){
-     var user = Meteor.user();
-    if(user) {
+    var user = Meteor.user();
+    if(!user) {
+      return false;
+    }
+    if(Roles.userIsInRole(user,['admin'], 'default-group')) {
       return true;
     }
     return false;
