@@ -1,9 +1,19 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
+      "Italy": {
+        "name":"Italy",
+        "date":"2016-05-04",
+        "description":"a description",
+        "imgUrl":"http://i.imgur.com/x8f8KgRh.jpg",
+        "rank": 1,
+        "tags": "countryside",
+        "places": "",
+        "source": "http://imgur.com/a/dEvSb"
+      },  
       "Colorado": {
         "name":"Colorado",
-        "date":"2015-04-09",
+        "date":"2016-04-09",
         "description":"a description",
         "imgUrl":"http://i.imgur.com/x8f8KgRh.jpg",
         "rank": 1,
