@@ -5,7 +5,7 @@ if(Locations.find().count() === 0){
         "name":"Italy",
         "date":"2016-05-04",
         "description":"a description",
-        "imgUrl":"http://i.imgur.com/x8f8KgRh.jpg",
+        "imgUrl":"http://i.imgur.com/7sSkXITh.jpg",
         "rank": 1,
         "tags": "countryside",
         "places": "",
