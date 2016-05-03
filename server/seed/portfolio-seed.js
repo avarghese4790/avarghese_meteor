@@ -1,3 +1,4 @@
+Portfolio.remove({});
 if(Portfolio.find({}).count() === 0){
 	var portfolioMap = {
 		"1":{
@@ -6,7 +7,7 @@ if(Portfolio.find({}).count() === 0){
 			icon: "fa-th-large",
 			wowDelay: ".3s",
 			source: "/blocks",
-			display: "col-md-4"
+			display: "col-md-4 hide"
 		},
 		"2":{
 			category:"demo",
@@ -17,7 +18,7 @@ if(Portfolio.find({}).count() === 0){
 			display: "col-md-4 hide"
 		},
 		"3":{
-			category:"personal",
+			category:"demo",
 			title: "Travel Gallery Design",
 			icon: "fa-globe",
 			wowDelay: ".5s",
@@ -39,10 +40,18 @@ if(Portfolio.find({}).count() === 0){
 			wowDelay: ".7s",
 			source: "/admin",
 			display: "col-md-4 hide"
+		},
+		"6":{
+			category:"personal",
+			title: "Jekyll Blog",
+			icon: "fa-pencil",
+			wowDelay: ".8s",
+			source: "http://avarghese4790.github.io/",
+			display: "col-md-4"
 		}
 	};
 
 	for(var key in portfolioMap) {
-	  Portfolio.insert(locationMap[key]);  
+	  Portfolio.insert(portfolioMap[key]);  
 	}
 }

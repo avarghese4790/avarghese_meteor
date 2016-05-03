@@ -1,3 +1,4 @@
+Resume.remove({});
 if(Resume.find({}).count() === 0){
       Resume.insert({
             category: 'education',
