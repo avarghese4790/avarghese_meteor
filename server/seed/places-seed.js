@@ -25,11 +25,11 @@ if(Locations.find().count() === 0){
         "name":"Colorado",
         "date":"2016-04-09",
         "description":"a description",
-        "imgUrl":"http://i.imgur.com/x8f8KgRh.jpg",
+        "imgUrl":"http://i.imgur.com/QRil5OBh.jpg",
         "rank": 1,
         "tags": "tropical,resort,water-sports",
         "places": "",
-        "source": "http://imgur.com/a/AHnS7"
+        "source": "http://imgur.com/a/GznDe"
       },        
       "Maldives": {
         "name":"Maldives",
