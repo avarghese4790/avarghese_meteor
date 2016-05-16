@@ -441,7 +441,7 @@ h1,h2,h3,h4,h5,h6,
                             margin: 0px 10px;
                             a i {
                                 font-size: 35px;
-                                margin: 0 10px;
+                                margin: 5px 10px;
                                 &:hover {
                                     border-radius: 5px;
                                     border-left: 2px solid;
@@ -610,6 +610,13 @@ h1,h2,h3,h4,h5,h6,
             }
         }
     }
+}
+#network-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 #portfolio {
     min-height: 100%;
