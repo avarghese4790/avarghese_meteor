@@ -43,7 +43,7 @@ if(Portfolio.find({}).count() === 0){
 		},
 		"6":{
 			category:"personal",
-			title: "Jekyll Blog",
+			title: "Blog",
 			icon: "fa-pencil",
 			wowDelay: ".8s",
 			source: "http://avarghese4790.github.io/",
