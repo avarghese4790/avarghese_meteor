@@ -48,6 +48,14 @@ if(Portfolio.find({}).count() === 0){
 			wowDelay: ".8s",
 			source: "http://avarghese4790.github.io/",
 			display: "col-md-4"
+		},
+		"7":{
+			category:"demo",
+			title: "Blackjack Sim",
+			icon: "fa-clone",
+			wowDelay: ".9s",
+			source: "/blackjack",
+			display: "col-md-4"
 		}
 	};
 
