@@ -158,6 +158,10 @@ a,button,select {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.padded-left-right {
+    padding-left: 5px;
+    padding-right: 5px;
+}
 h1,h2,h3,h4,h5,h6 {
     @extend .text-shadow;
     margin: 5px 0 5px 0 !important;
@@ -427,7 +431,7 @@ h1,h2,h3,h4,h5,h6,
                         padding: 10px 0;
                     }
                     #aboutme-content {
-                        @extend .padded-top-bottom, .bg-translucent, .bg-shadow, .bg-rounded;
+                        @extend .padded-top-bottom, .padded-left-right, .bg-translucent, .bg-shadow, .bg-rounded;
                         &:hover {
                             box-shadow: $shadow-size $color-2;
                         }
