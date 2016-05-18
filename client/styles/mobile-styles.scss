@@ -91,10 +91,10 @@ $m-color-2: white;
         border: 1px solid  rgba(0,0,0,1) !important;
     }
     .tl-point:before {
-        border-top: 4px solid black;
+        border-top: 4px solid black !important;
     }
     .tl-point-border-left, .tl-line {
-        border-left: 3px solid black;
+        border-left: 3px solid black !important;
     }
     #board { 
         box-shadow: none !important;
@@ -103,6 +103,24 @@ $m-color-2: white;
         display: none;
     }
     .widget-content {
-        max-width: 340px;
+        max-width: 340px !important;
+    }
+    h1 {
+        font-size: 25px !important;
+    }
+    h2 {
+        font-size: 20px !important;
+    }
+    h3{
+        font-size: 16px !important; 
+    }
+    #aboutme-summary {
+        font-size: 12px !important;
+    }
+    #aboutme-content p {
+        min-height: 160px !important;
+    }
+    #submit-msg-btn {
+        font-size: 15px;    
     }
 }

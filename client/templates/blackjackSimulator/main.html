@@ -150,7 +150,7 @@
 					var player = this[players[i]];
 					$("#bs-"+players[i]+"-hand").empty();
 					for(var j = 0; j < this[players[i]].hand.length; j++){
-						var card = "<span class='bs-card bs-"
+						var card = "<span class='bs-card bs-suit-"
 							+player.hand[j].color
 							+"'><div class='bs-card-top'>"
 							+player.hand[j].face.concat(player.hand[j].suit)
