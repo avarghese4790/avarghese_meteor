@@ -150,16 +150,6 @@ if(Locations.find().count() === 0){
         "tags": "city",
         "places": "",
         "source": "http://imgur.com/a/WJnS3"
-      },
-      "Puerto Rico":{
-        "name":"Puerto Rico",
-        "date":"2014-08-30",
-        "description":"a description",
-        "imgUrl":"",
-        "rank": 10,
-        "tags": "city",
-        "places": "",
-        "source": ""
       }
     };
 
