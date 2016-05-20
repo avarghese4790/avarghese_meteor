@@ -6,9 +6,9 @@ Template.travelGallery.onRendered(function(){
 	      $('#tg-content').removeClass('hide');
 	    }, 1000);
 
-	    setTimeout(function(){
-	      $('#tg-intro-popup').removeClass('hide');
-	    }, 1000);
+	    // setTimeout(function(){
+	    //   $('#tg-intro-popup').removeClass('hide');
+	    // }, 1000);
 	});
 
   	$('#tg-intro-close-btn').click(function(){
