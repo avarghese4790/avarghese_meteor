@@ -5,14 +5,14 @@ if(Locations.find().count() === 0){
         "name":"Italy",
         "date":"2016-05-04",
         "description":"a description",
-        "imgUrl":"http://i.imgur.com/Te9YT0sh.jpg",
+        "imgUrl":"http://i.imgur.com/Z9dw87jh.jpg",
         "rank": 1,
         "tags": "countryside,hiking,city,gondolas",
         "places": "",
         "source": "http://imgur.com/a/z7iaO"
       }, 
       "Barcelona": {
-        "name":"Barcelona",
+        "name":"Spain",
         "date":"2016-05-13",
         "description":"a description",
         "imgUrl":"http://i.imgur.com/RLSRJv0h.jpg",
