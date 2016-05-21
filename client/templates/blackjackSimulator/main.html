@@ -168,7 +168,7 @@
 				var count = 0;
 				for(var j = 0; j < this.dealer.hand.length; j++){
 					var card = this.dealer.hand[j];
-					if(card.face == 'A' && (count+card.value) >21){
+					if(card.face == 'A' && (count+card.value) > 21){
 						count += 1;
 					} else {
 						count += card.value;
@@ -178,26 +178,26 @@
 					$('#bs-player-wins').empty().append(++this.player.wins);
 					$('#bs-messages').empty().append('You Win!');
 					this.done = true;
-				}
-				if(this.done){
 					return
 				}
 				if(this.dealer.hand.length > 4){
 					$('#dealer-wins').empty().append(++this.dealer.wins);
 					$('#messages').empty().append('You Lose');
 					this.done = true;
+					return
 				}
 				if(count == 21){
 					$('#bs-dealer-wins').empty().append(++this.dealer.wins);
 					$('#bs-messages').empty().append('You Lose');
 					this.done = true;
+					return
 				}	
 			},
 			checkStatus: function(){
 				var count = 0;
 				for(var j = 0; j < this.player.hand.length; j++){
 					var card = this.player.hand[j];
-					if(card.face == 'A' && (count+card.value) >21){
+					if(card.face == 'A' && (count+card.value) > 21){
 						count += 1;
 					} else {
 						count += card.value;
@@ -207,19 +207,19 @@
 					$('#bs-dealer-wins').empty().append(++this.dealer.wins);
 					$('#bs-messages').empty().append('You Busted!');
 					this.done = true;
-				}
-				if(this.done){
 					return
 				}
 				if(this.player.hand.length > 4){
 					$('#bs-player-wins').empty().append(++this.player.wins);
 					$('#bs-messages').empty().append('You Win');
 					this.done = true;
+					return
 				}
 				if(count == 21){
 					$('#bs-player-wins').empty().append(++this.player.wins);
 					$('#bs-messages').empty().append('You Win');
 					this.done = true;
+					return
 				}	
 			}
 		};
