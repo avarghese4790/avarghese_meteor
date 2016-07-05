@@ -56,6 +56,14 @@ if(Portfolio.find({}).count() === 0){
 			wowDelay: ".9s",
 			source: "/blackjack",
 			display: "col-md-4"
+		},
+		"8":{
+			category:"professional",
+			title: "Resume Builder",
+			icon: "fa-file-text-o",
+			wowDelay: "1s",
+			source: "https://resume-builder5.herokuapp.com/",
+			display: "col-md-4"
 		}
 	};
 

@@ -98,7 +98,8 @@ if(Resume.find({}).count() === 0){
                         'Presented on multiple occasions including functional demos to upper management',
                         'Participated in product backlog grooming sessions, including story estimations, tasking, and discussions',
                         'Leveraged acquired technology knowledge to implement product solutions',
-                        'Led carrier integration efforts to upgrade carrier APIs and troubleshoot connectivity issues'
+                        'Led carrier integration efforts to upgrade carrier APIs and troubleshoot connectivity issues',
+                        'Initiated and led agile meetings including scrum, grooming, retrospectives, and planning sessions'
                         ]
       });
       Resume.insert({
@@ -122,16 +123,16 @@ if(Resume.find({}).count() === 0){
             skillCategory: 'Languages',
             skills: ['Java/J2EE',
                         'Groovy',
-                        'HTML5',
-                        'CSS3',
-                        'JavaScript',
-                        'JSON',
-                        'AJAX',
-                        'XML/XSD',
-                        'XSLT',
+                        'JavaScript ES5/ES6',
                         'Shell Scripting',
-                        'Python',
-                        'GORM',]
+                        'Python']
+      });
+      Resume.insert({
+            category: 'technicalSkills',
+            skillCategory: 'Markup',
+            skills: ['HTML/HTML5',                        
+                        'XML/XSD',
+                        'XSLT']
       });
       Resume.insert({
             category: 'technicalSkills',
@@ -145,7 +146,8 @@ if(Resume.find({}).count() === 0){
                         'Oracle SQL Developer',
                         'PL/SQL',
                         'JDBC',
-                        'MyBatis']
+                        'MyBatis',
+                        'GORM']
       });
       Resume.insert({
             category: 'technicalSkills',
@@ -156,7 +158,11 @@ if(Resume.find({}).count() === 0){
                         'Blaze',
                         'Handlebars',
                         'NPM',
-                        'Bower']
+                        'Bower',
+                        'Gulp',
+                        'JSON',
+                        'CSS/CSS3',
+                        'Sass/SCSS']
       });
       Resume.insert({
             category: 'technicalSkills',
@@ -188,7 +194,8 @@ if(Resume.find({}).count() === 0){
                         'FishEye/Crucible',
                         'Ant',
                         'Maven',
-                        'Gradle']
+                        'Gradle',
+                        'Travis-CI']
       });
       Resume.insert({
             category: 'technicalSkills',
@@ -199,7 +206,9 @@ if(Resume.find({}).count() === 0){
                         'Postman',
                         'HermesJMS',
                         'Selenium',
-                        'Firebug']
+                        'Firebug',
+                        'Karma',
+                        'Protractor']
       });
       Resume.insert({
             category: 'technicalSkills',
@@ -226,14 +235,16 @@ if(Resume.find({}).count() === 0){
             skillCategory: 'IDEs',
             skills: ['IntelliJ',
                         'Eclipse',
-                        'SpringSource']
+                        'SpringSource', 
+                        'Sublime']
       });
       Resume.insert({
             category: 'technicalSkills',
             skillCategory: 'Server',
             skills: ['Tomcat',
-                        'Node',
-                        'Meteor']
+                        'Node/Express',
+                        'Meteor',
+                        'Heroku']
       });
       Resume.insert({
             category: 'technicalSkills',
@@ -243,17 +254,18 @@ if(Resume.find({}).count() === 0){
       });
       Resume.insert({
             category: 'technicalSkillCategories',
-            categories: ['Languages', 
+            categories: ['Languages',                         
                         'Databases', 
                         'Frameworks',
+                        'Markup',
+                        'Source Control', 
                         'General Tools', 
                         'Front End', 
-                        'Source Control', 
+                        'Server', 
                         'Build Tools', 
                         'IDEs', 
-                        'Server', 
-                        'Testing',                   
-                        'Operating Systems']
+                        'Operating Systems',
+                        'Testing']
       });
 }
 

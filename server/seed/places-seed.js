@@ -1,6 +1,16 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
+     "Barcelona": {
+        "name":"Spain",
+        "date":"2016-05-13",
+        "description":"a description",
+        "imgUrl":"http://i.imgur.com/RLSRJv0h.jpg",
+        "rank": 1,
+        "tags": "architecture,hiking",
+        "places": "",
+        "source": "http://imgur.com/a/0Wx24"
+      }, 
       "Italy": {
         "name":"Italy",
         "date":"2016-05-04",
@@ -10,16 +20,6 @@ if(Locations.find().count() === 0){
         "tags": "countryside,hiking,city,gondolas",
         "places": "",
         "source": "http://imgur.com/a/z7iaO"
-      }, 
-      "Barcelona": {
-        "name":"Spain",
-        "date":"2016-05-13",
-        "description":"a description",
-        "imgUrl":"http://i.imgur.com/RLSRJv0h.jpg",
-        "rank": 1,
-        "tags": "architecture,hiking",
-        "places": "",
-        "source": "http://imgur.com/a/73UAT"
       },  
       "Colorado": {
         "name":"Colorado",
