@@ -1,7 +1,27 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
-     "Barcelona": {
+     "Puerto Rico": {
+        "name":"Puerto Rico",
+        "date":"2016-07-08",
+        "description":"a description",
+        "imgUrl":"http://i.imgur.com/T6PhmXyh.jpg",
+        "rank": 1,
+        "tags": "architecture,hiking,towns,mofungo",
+        "places": "",
+        "source": "http://imgur.com/a/CWr4t"
+      }, 
+     "San Francisco": {
+        "name":"San Francisco",
+        "date":"2016-07-02",
+        "description":"a description",
+        "imgUrl":"http://i.imgur.com/mQZnMf4h.jpg",
+        "rank": 20,
+        "tags": "walking,city,pier",
+        "places": "",
+        "source": "http://imgur.com/a/6CEOm"
+      }, 
+      "Barcelona": {
         "name":"Spain",
         "date":"2016-05-13",
         "description":"a description",
@@ -112,7 +132,7 @@ if(Locations.find().count() === 0){
         "source": "http://imgur.com/a/wF1UV"
       },
       "East Coast N":{
-        "name":"East Coast N",
+        "name":"East Coast Roadtrip going North",
         "date":"2014-11-08",
         "description":"a description",
         "imgUrl":"http://i.imgur.com/Em5c4kdh.jpg",
@@ -122,7 +142,7 @@ if(Locations.find().count() === 0){
         "source": "http://imgur.com/a/x8Onv"
       },
       "East Coast S":{
-        "name":"East Coast S",
+        "name":"East Coast Roadtrip going South",
         "date":"2015-04-23",
         "description":"a description",
         "imgUrl":"http://i.imgur.com/7iQpKc8h.jpg",
