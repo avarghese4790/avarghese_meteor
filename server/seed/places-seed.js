@@ -1,6 +1,16 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
+     "Chicago": {
+        "name": "Chicago",
+        "date": "2016-08-06",
+        "description": "a description",
+        "imgUrl": "http://i.imgur.com/UURlnKlh.jpg",
+        "rank": 20,
+        "tags": "architecture,pier,cruise,pizza",
+        "places": "",
+        "source": "http://imgur.com/a/rCay6"
+     },
      "Puerto Rico": {
         "name":"Puerto Rico",
         "date":"2016-07-08",
