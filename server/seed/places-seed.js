@@ -1,6 +1,16 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
+     "Puerto Vallarta": {
+        "name": "Puerto Vallarta",
+        "date": "2016-08-20",
+        "description": "a description",
+        "imgUrl": "http://i.imgur.com/tI4r2nNh.jpg",
+        "rank": 5,
+        "tags": "resort,mexico,infinitypool",
+        "places": "",
+        "source": "http://imgur.com/a/t4kRN"
+     },
      "Chicago": {
         "name": "Chicago",
         "date": "2016-08-06",
