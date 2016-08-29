@@ -1,6 +1,16 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
+     "Negril": {
+        "name": "Negril",
+        "date": "2016-08-26",
+        "description": "a description",
+        "imgUrl": "http://i.imgur.com/pawE6y2h.jpg",
+        "rank": 2,
+        "tags": "resort,jamaica,villas,cliffjump",
+        "places": "",
+        "source": "http://imgur.com/a/go1Dc"
+     },
      "Puerto Vallarta": {
         "name": "Puerto Vallarta",
         "date": "2016-08-20",
