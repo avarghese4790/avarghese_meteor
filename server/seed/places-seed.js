@@ -1,6 +1,16 @@
 Locations.remove({});
 if(Locations.find().count() === 0){
     var locationMap = {
+     "Big Sur": {
+        "name": "Big Sur",
+        "date": "2016-09-23",
+        "description": "a description",
+        "imgUrl": "http://i.imgur.com/Q0lyf12h.jpg",
+        "rank": 2,
+        "tags": "roadtrip,bigsur",
+        "places": "",
+        "source": "http://imgur.com/a/V3P0z"
+     },
      "Negril": {
         "name": "Negril",
         "date": "2016-08-26",
@@ -77,7 +87,7 @@ if(Locations.find().count() === 0){
         "description":"a description",
         "imgUrl":"http://i.imgur.com/QRil5OBh.jpg",
         "rank": 1,
-        "tags": "tropical,resort,water-sports",
+        "tags": "tropical,resort,watersports",
         "places": "",
         "source": "http://imgur.com/a/GznDe"
       },        
@@ -87,7 +97,7 @@ if(Locations.find().count() === 0){
         "description":"a description",
         "imgUrl":"http://i.imgur.com/x8f8KgRh.jpg",
         "rank": 1,
-        "tags": "tropical,resort,water-sports",
+        "tags": "tropical,resort,watersports",
         "places": "",
         "source": "http://imgur.com/a/AHnS7"
       },
@@ -147,7 +157,7 @@ if(Locations.find().count() === 0){
         "description":"a description",
         "imgUrl":"http://i.imgur.com/3Jr1CVKh.jpg",
         "rank": 1,
-        "tags": "tropical,resort,volcanic-bath",
+        "tags": "tropical,resort,volcanicbath",
         "places": "",
         "source": "http://imgur.com/a/OZl4l"
       },
@@ -167,7 +177,7 @@ if(Locations.find().count() === 0){
         "description":"a description",
         "imgUrl":"http://i.imgur.com/Em5c4kdh.jpg",
         "rank": 10,
-        "tags": "east-coast,driving,roadtrip",
+        "tags": "eastcoast,driving,roadtrip",
         "places": "",
         "source": "http://imgur.com/a/x8Onv"
       },
@@ -178,7 +188,7 @@ if(Locations.find().count() === 0){
         "imgUrl":"http://i.imgur.com/7iQpKc8h.jpg",
         "rank": 10,
         "tags": "east-coast,driving,roadtrip",
-        "places": "san-francisco,los-angeles,san-diego",
+        "places": "sanfrancisco,losangeles,sandiego",
         "source": "http://imgur.com/a/03ibF"
       },
       "Cabo San Lucas":{
